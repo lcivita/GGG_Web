@@ -1,0 +1,76 @@
+/* general site style */
+html {
+    scroll-behavior: smooth;
+}
+
+/* site header style */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    padding: 0 15px;
+    background-color: #000;
+    border-bottom: 2px solid #fff;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* body style */
+body {
+    /* use custom cursor if wanted (max 32x32 px) */
+    /* cursor: url('Cursors/CustomCursor.png'), auto; */
+    background-color: darkred;
+    
+    /* prevent over scrolling */
+    overscroll-behavior: none;
+    overscroll-behavior-x: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* link style */
+a {
+    color: yellow;
+}
+
+/* on hover link style */
+a:hover {
+    color: deeppink;
+}
+
+h1 {
+    color: aqua;
+}
+
+h2 {
+    color: fuchsia;
+}
+
+p {
+    color: lawngreen;
+}
+
+image {
+    
+}
+
+video {
+    
+}
+
+/*
+custom class style:
+example of how to use this in html:
+<h1 class="test-class">sample h1 class</h1>
+or 
+<img src="Images/testImage.png" alt="testImageAltDescription" class="test-class">
+*/
+.test-class {
+    color: green;
+}
