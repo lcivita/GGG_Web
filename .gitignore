@@ -1,2 +1,3 @@
 ﻿# Ignore the .idea folder (used by JetBrains IDEs like IntelliJ IDEA, PyCharm, etc.)
 .idea/
+*.sln
