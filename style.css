@@ -9,14 +9,14 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 header {
     background-color: #f4f4f4;
-    padding: 1rem;
+    padding: 10rem;
     text-align: center;
 }
 
@@ -40,6 +40,7 @@ nav ul li a {
 
 main {
     margin-top: 2rem;
+    text-align: center;
 }
 
 section {
@@ -51,7 +52,7 @@ h2 {
 }
 
 ul {
-    margin-left: 2rem;
+    margin-left: 0rem;
 }
 
 footer {
@@ -59,4 +60,93 @@ footer {
     margin-top: 2rem;
     padding: 1rem;
     background-color: #f4f4f4;
+}
+
+/*added by Ally*/
+#trailer,
+#body,
+#screenshots
+{
+  margin: 5rem auto;
+}
+
+
+.hidden
+{
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#trailer
+{
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  /*changed from 100vw to 50vw*/
+  width: 50vw;
+  height: 56.25vw;
+  max-height: 45.7rem;
+  max-width: 80rem;
+  transition: 350ms transform ease;
+  transition-property: transform, filter;
+  cursor: pointer;
+  }
+
+#trailer iframe
+{
+  transition: 1000ms all ease;
+  border-radius: 0.6rem;
+  border: .25rem solid #000;
+  padding: 0.5rem;
+  background: #fff;
+  overflow: hidden;
+  object-fit: fill;
+}
+
+#trailer.poster iframe
+{
+  opacity: 0;
+}
+
+#trailer.poster,
+#trailer.loading
+{
+  background-image: url("/img/.png");
+}
+
+#trailer.loading
+{
+  animation-name: pulse;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+#trailer.playing
+{
+  animation-name: none;
+}
+
+@keyframes pulse
+{
+  from { opacity: 1; }
+  50% { opacity: 0.35; }
+  to { opacity: 1; }
+}
+
+#trailer.playing iframe
+{
+  opacity: 1;
+}
+
+#trailer:hover
+{
+  transform: translateY(-0.25rem) scale(1.005);
+  filter: drop-shadow(0 0.25rem 1rem rgba(122,34,89,0.25));
 }

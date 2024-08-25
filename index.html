@@ -3,62 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goo Goo Grapplers</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="/img/.png" type="image/png" />
+    <link rel="preload" as="image" href="/img/.png" type="image/png" />
+    <link rel="preload" as="image" href="/img/.png" type="image/png" />
+    <link rel="preload" as="image" href="/img/.png" type="image/png" />
+    <link rel="preload" as="image" href="/img/.png" type="image/png" />
+    <!-- title -->
+    <title>Goo Goo Grapplers</title>
+    <meta name="title" content="Goo Goo Grapplers">
+    <meta property="og:title" content="Goo Goo Grapplers">
+    <meta property="twitter:title" content="Goo Goo Grapplers">
+    <meta name="apple-mobile-web-app-title" content="Goo Goo Grapplers">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- Font -->
+    <style>
+		@font-face
+		{
+				font-family: '';
+				src: url('/fonts/.woff2') format('woff2'),
+						url('/fonts/.woff') format('woff');
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+		}
+	</style>
     
     
 </head>
-<body>
-<header>
-    <div class="logo-title">
-       
-        <h1>
-            <img src="Images/SiteIcon.png" alt=" ">Goo Goo Grapplers</h1>
+<body id="home">
+    <div id="parallaxWrapper" aria-hidden="true">
+		<div id="layer01" class="parallaxLayer" data-speed="15"></div>
+		<div id="layer02" class="parallaxLayer" data-speed="30"></div>
+		<div id="layer03" class="parallaxLayer" data-speed="20"></div>
+		<div id="layer04" class="parallaxLayer" data-speed="60"></div>
+		<div id="layer05" class="parallaxLayer" data-speed="20"></div>
+	</div>
+
+    <div id="container">    
+        <header>
+        <div class="logo-title">
+            <h1><img src="Images/SiteIcon.png" alt=" ">Goo Goo Grapplers</h1>
+        </div>
+        </header>
+        <main>
+            <section id="trailer" class="poster">
+                <h2 class="hidden">Trailer Video</h2>
+                <div id="ytplayer" data-id="EF8qGI3f7Rk"></div>
+            </section>
+        
+            <section id="about">
+            <h2 class="hidden">About the Game</h2>
+            <p>
+                Goo Goo Grapplers is a 1v1 local battle arena game where you compete with your twin to see who is truly the better baby.
+                <br>
+                Customize and upgrade your baby and abilities to reach new levels of power!
+            </p>
+            </section>
+    
+            <section id="features">
+            <h2 class="hidden">Key Features</h2>
+            <ul>
+                <li>Dozens of unique ability and upgrade combinations</li>
+                <li>Couch friendly local multiplayer</li>
+                <li>Dynamic twin stick combat!</li>
+                <li>Strategic map events</li>
+            </ul>
+            </section>
+    
+            <section id="screenshots">
+                <h2 class="hidden">Screenshots</h2>
+                    <a href="/img/testImage.png">
+                            <img
+                            loading="lazy"
+                            id="screenshot-01"
+                            srcset="/img/testImage@0.25x.png 480w, /img/testImage@0.5x.png 960w, /img/testImage.png 1920w"
+                            sizes="(min-width: 670px) 40vw, 80vw"
+                            src="/img/testImage.png"
+                            alt="Screenshot from Goo Goo Grapplers"
+                            />
+                    </a>
+                <br>
+                    <a href="/img/testImage.png">
+                            <img
+                            loading="lazy"
+                            id="screenshot-01"
+                            srcset="/img/testImage@0.25x.png 480w, /img/testImage@0.5x.png 960w, /img/testImage.png 1920w"
+                            sizes="(min-width: 670px) 40vw, 80vw"
+                            src="/img/testImage.png"
+                            alt="Screenshot from Goo Goo Grapplers"
+                            />
+                    </a>
+            </section>
+    
+            <section id="contact">
+                <h2 class="hidden">Contact Information</h2>
+                <p>A game by Both Good</p>
+            </section>
+    
+        </main>
+        <footer>
+            <p>contact@googoograpplers.com</p>
+            <p>&copy; 2024 Both Good. All rights reserved.</p>
+        </footer>
     </div>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#media">Media</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
 
-<main>
-    <section id="about">
-        <h2>About the Game</h2>
-        <p>Brief description of your game goes here.</p>
-    </section>
-
-    <section id="features">
-        <h2>Key Features</h2>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-    </section>
-
-    <section id="media">
-        <h2>Media</h2>
-        <p>Add screenshots, videos, or download links for press materials here.</p>
-    </section>
-
-    <section id="team">
-        <h2>Development Team</h2>
-        <p>Information about your team members goes here.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Your contact details for press inquiries.</p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2024 Both Good. All rights reserved.</p>
-</footer>
+    <div id="ninoParallaxWrapper" aria-hidden="true">
+		<div id="ninoLayer01" class="ninoParallaxLayer" data-speed="0"></div>
+		<div id="ninoLayer02" class="ninoParallaxLayer" data-speed="0"></div>
+		<div id="ninoLayer03" class="ninoParallaxLayer" data-speed="6"></div>
+		<div id="ninoLayer04" class="ninoParallaxLayer" data-speed="12"></div>
+	</div>
+	
+	<div id="viewer" aria-hidden="true">
+		<div id="image"></div>
+	</div>
+	
+	<script src="../js/despelote.js?2023-12-05"></script>
+	<script defer data-domain="despelote.game" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>
