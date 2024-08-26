@@ -37,45 +37,41 @@
 </head>
 <body id="home">
     <div id="parallaxWrapper" aria-hidden="true">
-		<div id="layer01" class="parallaxLayer" data-speed="15"></div>
-		<div id="layer02" class="parallaxLayer" data-speed="30"></div>
-		<div id="layer03" class="parallaxLayer" data-speed="20"></div>
-		<div id="layer04" class="parallaxLayer" data-speed="60"></div>
-		<div id="layer05" class="parallaxLayer" data-speed="20"></div>
-	</div>
-
-    <div id="container">    
-        <header>
-        <div class="logo-title">
-            <h1><img src="Images/SiteIcon.png" alt=" ">Goo Goo Grapplers</h1>
-        </div>
-        </header>
-        <main>
+		<div id="layer01" class="parallaxLayer" data-speed="0">
+            <header id="header">
+                <div class="image-container">
+                    <img src="img/3_Logo.png" alt="Goo Goo Grapplers" class="styled-image">
+                </div>
+            </header>
             <section id="trailer" class="poster">
+                <img id="rainbow" src="img/3_Rainbow.png">
                 <h2 class="hidden">Trailer Video</h2>
                 <div id="ytplayer" data-id="EF8qGI3f7Rk"></div>
             </section>
-        
-            <section id="about">
-            <h2 class="hidden">About the Game</h2>
-            <p>
-                Goo Goo Grapplers is a 1v1 local battle arena game where you compete with your twin to see who is truly the better baby.
-                <br>
-                Customize and upgrade your baby and abilities to reach new levels of power!
-            </p>
-            </section>
-    
-            <section id="features">
-            <h2>Key Features</h2>
-            <ul>
-                <ul>- Dozens of unique ability and upgrade combinations</li>
-                <ul>- Couch friendly local multiplayer</li>
-                <ul>- Dynamic twin stick combat!</li>
-                <ul>- Strategic map events</li>
-            </ul>
-            </section>
-    
-            <section id="screenshots">
+            <div class="center-container">
+                <section id="about">
+                <h2 class="hidden">About the Game</h2>
+                <p>
+                    Goo Goo Grapplers is a 1v1 local battle arena game where you compete with your twin to see who is truly the better baby.
+                    <br>
+                    Customize and upgrade your baby and abilities to reach new levels of power!
+                </p>
+                </section>
+                <section id="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <ul>- Dozens of unique ability and upgrade combinations</li>
+                    <ul>- Couch friendly local multiplayer</li>
+                    <ul>- Dynamic twin stick combat!</li>
+                    <ul>- Strategic map events</li>
+                </ul>
+                </section>  
+            </div> 
+        </div>
+
+		<div id="layer02" class="parallaxLayer" data-speed="45">
+            <img id="tower" src="img/2_Tower.png">
+            <!-- <section id="screenshots">
                 <h2 class="hidden">Screenshots</h2>
                     <a href="/img/testImage.png">
                             <img
@@ -98,34 +94,30 @@
                             alt="Screenshot from Goo Goo Grapplers"
                             />
                     </a>
-            </section>
-    
-            <section id="contact">
-                <h2 class="hidden">Contact Information</h2>
-                <p>A game by Both Good</p>
-            </section>
-    
-        </main>
-        <footer>
-            <p style="font-size: 5rem; margin-top: 2rem;"><a href="mailto:contact@googoograpplers.com">Contact</a>
+            </section> -->
+        </div>
+
+		<div id="layer03" class="parallaxLayer" data-speed="75">
+            <img id="botcloud" src="img/test cloud name.png">
+            <!-- <div class="center-container">
+                <section id="contact">
+                    <h2 class="hidden">Contact Information</h2>
+                    <p style="text-align: center;">A game by Both Good</p>
+                </section>
+            </div> -->
+        </div>
+	</div>
+
+    <footer>
+            <p style="font-size: 5rem; margin-top: 2rem;"><a href="mailto:contact@googoograpplers.com" style="text-decoration: none; color: antiquewhite;">Contact</a>
             </p>
             <br>
-            <p style="font-size: 1rem">&copy; 2024 Both Good. All rights reserved.</p>
-        </footer>
-    </div>
+            <p style="font-size: 1rem; color: antiquewhite;">&copy; 2024 Both Good. All rights reserved.</p>
+    </footer>
 
-    <div id="ninoParallaxWrapper" aria-hidden="true">
-		<div id="ninoLayer01" class="ninoParallaxLayer" data-speed="0"></div>
-		<div id="ninoLayer02" class="ninoParallaxLayer" data-speed="0"></div>
-		<div id="ninoLayer03" class="ninoParallaxLayer" data-speed="6"></div>
-		<div id="ninoLayer04" class="ninoParallaxLayer" data-speed="12"></div>
-	</div>
-	
-	<div id="viewer" aria-hidden="true">
-		<div id="image"></div>
-	</div>
-	
-	<script src="../js/despelote.js?2023-12-05"></script>
-	<script defer data-domain="despelote.game" src="https://plausible.io/js/script.js"></script>
+    <div id="viewer" aria-hidden="true">
+        <div id="image"></div>
+    </div>
+	<script src="script.js"></script>
 </body>
 </html>
