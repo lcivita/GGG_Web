@@ -306,7 +306,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
+    border: solid white 4px;
     object-fit: cover; /* Ensure the video covers the container while maintaining aspect ratio */
     pointer-events: auto; /* Allow user interaction with the video */
 }
