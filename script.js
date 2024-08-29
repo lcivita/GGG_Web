@@ -9,19 +9,14 @@ let currentScrollPosition = 0;
 let isAnimating = false;
 
 function snapScrollPosition(direction) {
-  // Update scroll position based on direction
   currentScrollPosition += direction * scrollUnit;
-
-  // Limit the scroll position to the boundaries of your content
+  
   currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, getTotalContentHeight() - window.innerHeight));
-
-  // Perform the scroll instantly
+  
   window.scrollTo(0, currentScrollPosition);
-
-  // Trigger parallax effects
+  
   doParallax();
-
-  // Allow new scrolls to be processed after the snap is done
+  
   isAnimating = false;
 }
 
@@ -68,13 +63,13 @@ function botParallax() {
 }
 
 function onScroll(event) {
-  // Prevent the default scrolling behavior for the whole page
+  // Prevent default scrolling behavior
   event.preventDefault();
 
   let delta = event.deltaY || -event.detail || event.wheelDelta;
 
   // Accumulate scroll delta but smooth the input
-  accumulatedScroll += delta / 2; // Reduce sensitivity by dividing, adjust as needed
+  accumulatedScroll += delta / 2;
 
   // Check if accumulated scroll exceeds a full scroll unit
   if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
@@ -84,7 +79,6 @@ function onScroll(event) {
   }
 }
 
-// Event listeners for scroll control
 window.addEventListener("wheel", onScroll, { passive: false });
 window.addEventListener("touchstart", onTouchStart, { passive: false });
 window.addEventListener("touchmove", onTouchMove, { passive: false });
@@ -100,19 +94,16 @@ function onTouchMove(event) {
   event.preventDefault();
 
   let deltaY = startY - event.touches[0].clientY;
-
-  // Gradually apply deltaY towards the lastDeltaY to smooth input
+  
   deltaY = lastDeltaY + (deltaY - lastDeltaY) * 0.2;
   lastDeltaY = deltaY;
-
-  // Accumulate touch scroll delta
+  
   accumulatedScroll += deltaY;
-
-  // Check if accumulated scroll exceeds a full scroll unit
+  
   if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
-    let direction = accumulatedScroll > 0 ? 1 : -1; // Determine the scroll direction
+    let direction = accumulatedScroll > 0 ? 1 : -1;
     accumulatedScroll = 0;
-    snapScrollPosition(direction); // Snap to the next scroll unit
+    snapScrollPosition(direction);
   }
 
   startY = event.touches[0].clientY;
@@ -121,7 +112,7 @@ function onTouchMove(event) {
 // Slideshow functionality
 function startSlideshow(slideshowId, interval = 6000) {
   const slideshow = document.getElementById(slideshowId);
-  if (!slideshow) return; // Check if slideshow element exists
+  if (!slideshow) return;
 
   const slides = slideshow.getElementsByClassName('slide');
   let currentIndex = 0;
@@ -132,11 +123,10 @@ function startSlideshow(slideshowId, interval = 6000) {
     slides[currentIndex].classList.add('active');
   }
 
-  slides[0].classList.add('active'); // Show the first slide initially
+  slides[0].classList.add('active');
   setInterval(showNextSlide, interval);
 }
 
-// Initialize slideshows when the DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   startSlideshow('slideshow1');
   startSlideshow('slideshow2');
