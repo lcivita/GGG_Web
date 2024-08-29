@@ -212,7 +212,7 @@ footer {
 #rainbow {
     position: relative;
     z-index: -1;
-    width: 200%; /* Maintain your desired width */
+    width: 300%; /* Maintain your desired width */
     height: auto;
     left: 50%;
     transform: translateX(-50%);
@@ -221,6 +221,7 @@ footer {
 /* Container to manage rainbow and video together */
 #rainbow-container {
     position: relative;
+    margin-top: -100px;
     width: 100%; /* Keep the container scaling with the rainbow */
     max-width: 100%; /* Ensure it stays responsive */
     overflow: visible; /* Allow the video to overflow if necessary */
@@ -230,10 +231,10 @@ footer {
 #video-container {
     pointer-events: none;
     position: absolute;
-    top: 33%; /* Adjust to move the video relative to the top of the rainbow */
+    top: 37%; /* Adjust to move the video relative to the top of the rainbow */
     left: 50%;
-    width: 90%; /* Scale the video relative to the rainbow's width */
-    height: 55%;
+    width: 100%; /* Scale the video relative to the rainbow's width */
+    height: 40%;
     transform: translate(-50%, -20%); /* Center the video horizontally and adjust vertically */
     z-index: 2; /* Ensure it stays on top of the rainbow */
     padding-bottom: 28.125%; /* Maintain a 16:9 aspect ratio for the video */
