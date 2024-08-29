@@ -214,6 +214,27 @@ footer {
   overflow-x: hidden;
 }
 
+#bothgood-container {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 40%;
+    z-index: 2; 
+}
+
+#gameby-text {
+    font-family: "Pixelify Sans", sans-serif; /* Match the font with your existing style */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #333; /* Adjust text color to contrast with the cloud */
+    margin-bottom: 10px; /* Add space between text and logo */
+}
+
+#bothgood-logo {
+    width: 100%; /* Adjust the size of the logo relative to the cloud */
+}
+
 /* Previous rainbow styling */
 #rainbow {
     position: relative;
