@@ -11,15 +11,9 @@ body::-webkit-scrollbar {
     overflow: visible;
     position: relative;
 }
-
-/*prevent horizontal scrolling*/
 body {
     overflow-x: hidden;
     overscroll-behavior: contain;
-    /*scroll-behavior: ;*/
-    /*scrollbar-width: none;*/
-    /*-ms-overflow-style: none; */
-    /*scrollbar-width: none;*/
 }
 
 /* Basic reset */
@@ -34,11 +28,14 @@ img {
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges; 
   image-rendering: -o-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
+  /*image-rendering: -webkit-optimize-contrast;*/
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.5rem;
     line-height: 1.6;
     color: #333;
