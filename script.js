@@ -21,9 +21,6 @@ function snapScrollPosition(direction) {
   // Trigger parallax effects
   doParallax();
 
-  // Reset accumulated scroll after snap
-  accumulatedScroll = 0;
-
   // Allow new scrolls to be processed after the snap is done
   isAnimating = false;
 }
@@ -76,13 +73,12 @@ function onScroll(event) {
 
   let delta = event.deltaY || -event.detail || event.wheelDelta;
 
-  // Accumulate scroll delta
-  accumulatedScroll += delta / 2;
+  // Accumulate scroll delta but smooth the input
+  accumulatedScroll += delta / 2; // Reduce sensitivity by dividing, adjust as needed
 
   // Check if accumulated scroll exceeds a full scroll unit
   if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
     let direction = accumulatedScroll > 0 ? 1 : -1; // Determine the scroll direction
-    isAnimating = true;
     accumulatedScroll = 0;
     snapScrollPosition(direction); // Snap to the next scroll unit
   }
@@ -94,6 +90,7 @@ window.addEventListener("touchstart", onTouchStart, { passive: false });
 window.addEventListener("touchmove", onTouchMove, { passive: false });
 
 let startY = 0;
+let lastDeltaY = 0;
 
 function onTouchStart(event) {
   startY = event.touches[0].clientY;
@@ -101,15 +98,20 @@ function onTouchStart(event) {
 
 function onTouchMove(event) {
   event.preventDefault();
+
   let deltaY = startY - event.touches[0].clientY;
 
+  // Gradually apply deltaY towards the lastDeltaY to smooth input
+  deltaY = lastDeltaY + (deltaY - lastDeltaY) * 0.2;
+  lastDeltaY = deltaY;
+
   // Accumulate touch scroll delta
-  accumulatedScroll += deltaY * 2;
+  accumulatedScroll += deltaY;
 
   // Check if accumulated scroll exceeds a full scroll unit
   if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
     let direction = accumulatedScroll > 0 ? 1 : -1; // Determine the scroll direction
-    isAnimating = true;
+    accumulatedScroll = 0;
     snapScrollPosition(direction); // Snap to the next scroll unit
   }
 
