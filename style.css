@@ -289,25 +289,25 @@ footer {
 
 /* Video container styling */
 #video-container {
-    pointer-events: none;
     position: absolute;
-    top: 37%; 
+    top: 38%; /* Adjust this value to position the video vertically relative to its parent */
     left: 50%;
-    width: 100%;
-    height: 40%;
-    transform: translate(-50%, -20%);
-    z-index: 2; 
-    padding-bottom: 28.125%;
+    width: 120%; /* Set the width of the container */
+    padding-bottom: 67.5%; /* 16:9 aspect ratio (9/16 = 0.5625 or 56.25%) */
+    transform: translate(-50%, -20%); /* Center the video horizontally and adjust vertically */
+    z-index: 2; /* Ensure it stays on top of other elements */
+    overflow: hidden; /* Hide any overflow to maintain aspect ratio */
 }
 
-/* Video iframe styling */
-#youtube-video {
-    pointer-events: none;
+/* Custom video styling */
+#custom-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
+    object-fit: cover; /* Ensure the video covers the container while maintaining aspect ratio */
+    pointer-events: auto; /* Allow user interaction with the video */
 }
 

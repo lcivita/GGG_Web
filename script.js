@@ -71,7 +71,8 @@ function botParallax() {
 }
 
 function onScroll(event) {
-  event.preventDefault(); // Prevent the default scrolling behavior
+  // Prevent the default scrolling behavior for the whole page
+  event.preventDefault();
 
   let delta = event.deltaY || -event.detail || event.wheelDelta;
 
@@ -88,9 +89,9 @@ function onScroll(event) {
 }
 
 // Event listeners for scroll control
-window.addEventListener("wheel", onScroll, { passive: false }); // For mouse wheel
-window.addEventListener("touchstart", onTouchStart, { passive: false }); // For touch devices
-window.addEventListener("touchmove", onTouchMove, { passive: false }); // For touch devices
+window.addEventListener("wheel", onScroll, { passive: false });
+window.addEventListener("touchstart", onTouchStart, { passive: false });
+window.addEventListener("touchmove", onTouchMove, { passive: false });
 
 let startY = 0;
 
