@@ -104,7 +104,7 @@ function onTouchMove(event) {
   let deltaY = startY - event.touches[0].clientY;
 
   // Accumulate touch scroll delta
-  accumulatedScroll += deltaY;
+  accumulatedScroll += deltaY * 2;
 
   // Check if accumulated scroll exceeds a full scroll unit
   if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
