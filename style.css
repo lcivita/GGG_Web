@@ -1,3 +1,27 @@
+/* Hide scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/*limit width */
+#pageContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: visible;
+    position: relative;
+}
+
+/*prevent horizontal scrolling*/
+body {
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    /*scroll-behavior: ;*/
+    /*scrollbar-width: none;*/
+    /*-ms-overflow-style: none; */
+    /*scrollbar-width: none;*/
+}
+
 /* Basic reset */
 * {
     margin: 0;
@@ -6,11 +30,11 @@
 }
 
 img {
-  image-rendering: pixelated; /* For most modern browsers */
-  image-rendering: crisp-edges; /* For older versions of Chrome and Safari */
-  image-rendering: -moz-crisp-edges; /* For Firefox */
-  image-rendering: -o-crisp-edges; /* For Opera */
-  image-rendering: -webkit-optimize-contrast; /* For WebKit-based browsers */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; 
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 body {
@@ -91,10 +115,9 @@ footer {
 
 /*Parallex*/
 #parallaxWrapper {
-  position: relative;
-  width: 100%;
-  height: 177vw; /* Extended height to demonstrate the scroll */
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    overflow: visible;
 }
 
 .parallaxLayer {
@@ -105,7 +128,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* layer 01 */
@@ -126,18 +149,21 @@ footer {
 }
 
 #rainbow {
-  position: relative;
-  z-index: -1;
-  width: 260%;
-  height: auto;
-  margin-top: 0vw;
-  overflow-x: hidden;
+    position: relative;
+    z-index: -1;
+    width: 200%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .center-container {
-  width: 50%;
-  max-width: 800px; 
-  margin: 0 auto;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    /*text-align: center;*/
+    overflow: visible;
 }
 
 #about, #features {
@@ -150,80 +176,14 @@ footer {
   left: -9999px; 
 }
 
-#trailer,
 #body,
-#screenshots
-{
-  margin: 3rem auto;
-}
 
-
-.hidden
-{
-  position: absolute;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: -1;
-}
-
-#trailer
-{
-  position: relative;
-  background-size: contain;
-  display: grid;
-  place-items: center;
-  width: 50vw;
-  height: 56.25vw;
-  max-height: 25.7rem;
-  max-width: 80rem;
-  transition: 350ms transform ease;
-  transition-property: transform, filter;
-  cursor: pointer;
-  }
-
-#trailer iframe
-{
-  transition: 1000ms all ease;
-  background: #fff;
-  overflow: hidden;
-  object-fit: fill;
-}
-
-#trailer.poster iframe
-{
-  opacity: 0;
-}
-
-#trailer.poster,
-#trailer.loading
-{
-  background-image: url("/img/poster\ placeholder.png");
-}
-
-#trailer.loading
-{
-  animation-name: pulse;
-  animation-duration: 1500ms;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
-  animation-timing-function: ease-in-out;
-}
-
-#trailer.playing
-{
-  animation-name: none;
-}
 
 @keyframes pulse
 {
   from { opacity: 1; }
   50% { opacity: 0.35; }
   to { opacity: 1; }
-}
-
-#trailer.playing iframe
-{
-  opacity: 1;
 }
 
 /* layer02 */

@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- Preload Images -->
-    <link rel="preload" as="image" href="/img/.png" type="image/png" />
-    <link rel="preload" as="image" href="/img/.png" type="image/png" />
-    <link rel="preload" as="image" href="/img/.png" type="image/png" />
-    <link rel="preload" as="image" href="/img/.png" type="image/png" />
-    <link rel="preload" as="image" href="/img/.png" type="image/png" />
     <!-- title -->
     <title>Goo Goo Grapplers</title>
     <meta name="title" content="Goo Goo Grapplers">
@@ -36,21 +30,25 @@
     
 </head>
 <body id="home">
+<div id="pageContainer">
     <div id="parallaxWrapper" aria-hidden="true">
-		<div id="layer01" class="parallaxLayer" data-speed="0">
+
+        <div id="layer00" class="parallaxLayer" data-speed="-30">
             <header id="header">
                 <div class="image-container">
                     <img src="img/3_Logo.png" alt="Goo Goo Grapplers" class="styled-image">
                 </div>
             </header>
-            <section id="trailer" class="poster">
-                <img id="rainbow" src="img/3_Rainbow.png">
-                <h2 class="hidden">Trailer Video</h2>
-                <div id="ytplayer" data-id="EF8qGI3f7Rk"></div>
-            </section>
+        </div>
+        
+		<div id="layer01" class="parallaxLayer" data-speed="0">
             <div class="center-container">
+                <img id="rainbow" src="img/3_Rainbow.png">
                 <section id="about">
+                    
+                    <br>
                 <h2 class="hidden">About the Game</h2>
+                    
                 <p>
                     Goo Goo Grapplers is a 1v1 local battle arena game where you compete with your twin to see who is truly the better baby.
                     <br>
@@ -69,55 +67,16 @@
             </div> 
         </div>
 
-		<div id="layer02" class="parallaxLayer" data-speed="45">
+		<div id="layer02" class="parallaxLayer" data-speed="25">
             <img id="tower" src="img/2_Tower.png">
-            <!-- <section id="screenshots">
-                <h2 class="hidden">Screenshots</h2>
-                    <a href="/img/testImage.png">
-                            <img
-                            loading="lazy"
-                            id="screenshot-01"
-                            srcset="/img/testImage@0.25x.png 480w, /img/testImage@0.5x.png 960w, /img/testImage.png 1920w"
-                            sizes="(min-width: 670px) 40vw, 80vw"
-                            src="/img/testImage.png"
-                            alt="Screenshot from Goo Goo Grapplers"
-                            />
-                    </a>
-                <br>
-                    <a href="/img/testImage.png">
-                            <img
-                            loading="lazy"
-                            id="screenshot-01"
-                            srcset="/img/testImage@0.25x.png 480w, /img/testImage@0.5x.png 960w, /img/testImage.png 1920w"
-                            sizes="(min-width: 670px) 40vw, 80vw"
-                            src="/img/testImage.png"
-                            alt="Screenshot from Goo Goo Grapplers"
-                            />
-                    </a>
-            </section> -->
         </div>
 
-		<div id="layer03" class="parallaxLayer" data-speed="75">
+		<div id="layer03" class="parallaxLayer" data-speed="40">
+            
             <img id="botcloud" src="img/test cloud name.png">
-            <!-- <div class="center-container">
-                <section id="contact">
-                    <h2 class="hidden">Contact Information</h2>
-                    <p style="text-align: center;">A game by Both Good</p>
-                </section>
-            </div> -->
         </div>
 	</div>
-
-    <footer>
-            <p style="font-size: 5rem; margin-top: 2rem;"><a href="mailto:contact@googoograpplers.com" style="text-decoration: none; color: antiquewhite;">Contact</a>
-            </p>
-            <br>
-            <p style="font-size: 1rem; color: antiquewhite;">&copy; 2024 Both Good. All rights reserved.</p>
-    </footer>
-
-    <div id="viewer" aria-hidden="true">
-        <div id="image"></div>
-    </div>
 	<script src="script.js"></script>
+</div>
 </body>
 </html>

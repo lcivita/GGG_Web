@@ -1,137 +1,118 @@
-// Parallax header
 var body = document.body;
 var layers = document.getElementsByClassName("parallaxLayer");
 var ninoLayers = document.getElementsByClassName("ninoParallaxLayer");
-var container = document.getElementById("container");
-
 var nino = document.getElementById("ninoParallaxWrapper");
 
-function topParallax() {
-    var top = window.pageYOffset;
-    
-    var layer, speed, yPos;
+let scrollUnit = 20; // Define your scroll unit size in pixels
+let accumulatedScroll = 0; // To accumulate scroll input
+let currentScrollPosition = 0;
+let isAnimating = false;
 
-    for (var i = 0; i < layers.length; i++)
-    {
-      layer = layers[i];
-      speed = layer.dataset.speed;
-      var yPos = -(top * speed / 1000);
-      layer.style.transform = 'translate3d(0,' + yPos + 'rem, 0)';
-    }
-  }
-  
-var ninoPos, ninoRect, ninoEnd;
+function snapScrollPosition(direction) {
+  // Update scroll position based on direction
+  currentScrollPosition += direction * scrollUnit;
 
-function botParallax() {
-  
-    ninoRect = nino.getBoundingClientRect().height;
-    ninoEnd = nino.getBoundingClientRect().bottom - window.innerHeight;
-    ninoPos = nino.getBoundingClientRect().top - window.innerHeight;
-    
-    var ninoLayer, ninoSpeed, ninoYPos;
+  // Limit the scroll position to the boundaries of your content
+  currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, getTotalContentHeight() - window.innerHeight));
 
-    for (var i = 0; i < ninoLayers.length; i++) {
-      ninoLayer = ninoLayers[i];
-      ninoSpeed = ninoLayer.dataset.speed;
-      if (ninoPos < 0)
-      {
-        var ninoYPos = (ninoPos / ninoRect) * ninoSpeed ;
-        ninoLayer.style.transform = 'translate3d(0,' + -ninoYPos + 'vw, 0)';
+  // Perform the scroll instantly
+  window.scrollTo(0, currentScrollPosition);
 
-      }
-      else
-      {
-        ninoLayer.style.transform = 'translate3d(0, 0vw, 0)';
-      }
-    }
-  }
+  // Trigger parallax effects
+  doParallax();
+
+  // Reset accumulated scroll after snap
+  accumulatedScroll = 0;
+
+  // Allow new scrolls to be processed after the snap is done
+  isAnimating = false;
+}
+
+function getTotalContentHeight() {
+  var lastLayer = layers[layers.length - 1];
+  var lastLayerBottom = lastLayer.getBoundingClientRect().bottom + window.pageYOffset;
+  return lastLayerBottom;
+}
 
 function doParallax() {
-  topParallax();
+  var top = currentScrollPosition;
+  topParallax(top);
   botParallax();
 }
 
-window.addEventListener("scroll", doParallax);
-
-
-// Screenshots
-
-function toggleViewer(e) {
-  ev = e;
-  ev.preventDefault();
-  if (body.classList.contains("viewer"))
-  {
-    body.classList.remove("viewer");
-    body.dataset.viewer = "";
-  }
-  else
-  {
-    body.classList.add("viewer");
-    body.dataset.viewer = ev.target.id;
+function topParallax(top) {
+  var layer, speed, yPos;
+  for (var i = 0; i < layers.length; i++) {
+    layer = layers[i];
+    speed = layer.dataset.speed;
+    yPos = -(top * speed / 100);
+    layer.style.transform = 'translate3d(0,' + yPos + 'px, 0)';
   }
 }
 
-var screenshots = document.getElementsByClassName("screenshot");
-var screenshot;
+function botParallax() {
+  // Check if the nino element exists before proceeding
+  if (!nino) return;
 
-for (var i = 0; i < screenshots.length; i++) {  
-  screenshot = screenshots[i];
-  screenshot.addEventListener("click", toggleViewer);
-}
+  var ninoRect = nino.getBoundingClientRect().height;
+  var ninoPos = nino.getBoundingClientRect().top - window.innerHeight;
+  var ninoLayer, ninoSpeed, ninoYPos;
 
-document.getElementById("viewer").addEventListener("click",toggleViewer);
-
-// Trailer video
-
-var trailer, playerElement, videoId;
-
-function loadVideo() {
-  document.getElementById("trailer").classList.add('loading');
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  trailer.removeEventListener("click",loadVideo);
-}
-
-var player;
-
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('ytplayer', {
-    height: '100%',
-    width: '100%',
-    videoId: videoId,
-    playerVars: {
-      modestbranding: 1,
-      showinfo: 0,
-      rel: 0,
-      enablejsapi: 1,
-      controls: 1,
-      widgetid: 0
-    },
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
+  for (var i = 0; i < ninoLayers.length; i++) {
+    ninoLayer = ninoLayers[i];
+    ninoSpeed = ninoLayer.dataset.speed;
+    if (ninoPos < 0) {
+      ninoYPos = (ninoPos / ninoRect) * ninoSpeed;
+      ninoLayer.style.transform = 'translate3d(0,' + -ninoYPos + 'px, 0)';
+    } else {
+      ninoLayer.style.transform = 'translate3d(0, 0px, 0)';
     }
-  });
+  }
 }
 
-function onPlayerReady(event){
-  event.target.playVideo();
-  document.getElementById("trailer").classList.remove('poster');
-  document.getElementById("trailer").classList.remove('loading');
+
+function onScroll(event) {
+  event.preventDefault(); // Prevent the default scrolling behavior
+
+  let delta = event.deltaY || -event.detail || event.wheelDelta;
+
+  // Accumulate scroll delta
+  accumulatedScroll += delta / 2;
+
+  // Check if accumulated scroll exceeds a full scroll unit
+  if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
+    let direction = accumulatedScroll > 0 ? 1 : -1; // Determine the scroll direction
+    isAnimating = true;
+    accumulatedScroll = 0;
+    snapScrollPosition(direction); // Snap to the next scroll unit
+    
+  }
 }
 
-function onPlayerStateChange(event){
-  document.getElementById("trailer").classList.add('playing');
+// Event listeners for scroll control
+window.addEventListener("wheel", onScroll, { passive: false }); // For mouse wheel
+window.addEventListener("touchstart", onTouchStart, { passive: false }); // For touch devices
+window.addEventListener("touchmove", onTouchMove, { passive: false }); // For touch devices
 
-}
-  
-function initVideo() {
-  trailer = document.getElementById("trailer");
-  playerElement = document.querySelector('#ytplayer');
-  videoId = playerElement.dataset.id;
-  trailer.addEventListener("click",loadVideo);
+let startY = 0;
+
+function onTouchStart(event) {
+  startY = event.touches[0].clientY;
 }
 
-document.addEventListener('DOMContentLoaded', initVideo);
+function onTouchMove(event) {
+  event.preventDefault();
+  let deltaY = startY - event.touches[0].clientY;
+
+  // Accumulate touch scroll delta
+  accumulatedScroll += deltaY;
+
+  // Check if accumulated scroll exceeds a full scroll unit
+  if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
+    let direction = accumulatedScroll > 0 ? 1 : -1; // Determine the scroll direction
+    isAnimating = true;
+    snapScrollPosition(direction); // Snap to the next scroll unit
+  }
+
+  startY = event.touches[0].clientY;
+}
