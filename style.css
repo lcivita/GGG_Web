@@ -163,7 +163,13 @@ footer {
     overflow: visible;
 }
 
-#about, #features {
+#about {
+    margin-top: -150px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#features {
   margin-bottom: 20px;
   padding: 20px;
 }
