@@ -190,13 +190,47 @@ footer {
 }
 
 /* layer02 */
+/* Slideshow styling */
+.slideshow {
+    position: absolute;
+    top: 50%; /* Center vertically relative to the tower */
+    transform: translateY(-50%);
+    width: 55%;
+    height: 55%;
+    z-index: 0; /* Ensure it's behind the tower */
+    overflow: hidden; /* Hide overflow from sliding images */
+}
+
+#slideshow1 {
+    top: 51%;
+    left: 22.5%; /* Adjust to align with the first window */
+}
+
+#slideshow2 {
+    left: 22.5%;
+    top: 74%; /* Adjust to align with the second window */
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+/* Tower styling */
 #tower {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: auto;
-  margin-top: 0vw;
-  overflow-x: hidden;
+    position: relative;
+    z-index: 1; /* Ensure the tower is in front of the slideshows */
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    overflow-x: hidden;
 }
 
 #screenshots {
@@ -277,3 +311,4 @@ footer {
     height: 100%;
     border: none;
 }
+

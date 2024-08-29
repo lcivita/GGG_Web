@@ -70,7 +70,6 @@ function botParallax() {
   }
 }
 
-
 function onScroll(event) {
   event.preventDefault(); // Prevent the default scrolling behavior
 
@@ -85,7 +84,6 @@ function onScroll(event) {
     isAnimating = true;
     accumulatedScroll = 0;
     snapScrollPosition(direction); // Snap to the next scroll unit
-    
   }
 }
 
@@ -116,3 +114,27 @@ function onTouchMove(event) {
 
   startY = event.touches[0].clientY;
 }
+
+// Slideshow functionality
+function startSlideshow(slideshowId, interval = 6000) {
+  const slideshow = document.getElementById(slideshowId);
+  if (!slideshow) return; // Check if slideshow element exists
+
+  const slides = slideshow.getElementsByClassName('slide');
+  let currentIndex = 0;
+
+  function showNextSlide() {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }
+
+  slides[0].classList.add('active'); // Show the first slide initially
+  setInterval(showNextSlide, interval);
+}
+
+// Initialize slideshows when the DOM is ready
+document.addEventListener('DOMContentLoaded', function () {
+  startSlideshow('slideshow1');
+  startSlideshow('slideshow2');
+});
