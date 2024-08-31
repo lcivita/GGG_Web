@@ -3,8 +3,8 @@ var layers = document.getElementsByClassName("parallaxLayer");
 var ninoLayers = document.getElementsByClassName("ninoParallaxLayer");
 var nino = document.getElementById("ninoParallaxWrapper");
 
-let scrollUnit = 20; // Define your scroll unit size in pixels
-let accumulatedScroll = 0; // To accumulate scroll input
+let scrollUnit = 20;
+let accumulatedScroll = 0;
 let currentScrollPosition = 0;
 let isAnimating = false;
 
@@ -68,13 +68,12 @@ function onScroll(event) {
 
   let delta = event.deltaY || -event.detail || event.wheelDelta;
 
-  // Accumulate scroll delta but smooth the input
   accumulatedScroll += delta / 2;
-
-  // Check if accumulated scroll exceeds a full scroll unit
-  if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
+  while (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
     let direction = accumulatedScroll > 0 ? 1 : -1; // Determine the scroll direction
-    accumulatedScroll = 0;
+
+    accumulatedScroll -= direction * scrollUnit; // Reduce accumulated scroll by one unit in the direction
+
     snapScrollPosition(direction); // Snap to the next scroll unit
   }
 }
