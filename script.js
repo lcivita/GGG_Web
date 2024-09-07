@@ -43,7 +43,6 @@ function topParallax(top) {
 }
 
 function botParallax() {
-  // Check if the nino element exists before proceeding
   if (!nino) return;
 
   var ninoRect = nino.getBoundingClientRect().height;
