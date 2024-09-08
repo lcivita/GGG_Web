@@ -6,16 +6,15 @@
     overflow: visible;
     position: relative;
 }
+
+.main-margins {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 body {
     overflow-x: hidden;
     overscroll-behavior: contain;
-}
-
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 img {
@@ -28,31 +27,21 @@ img {
 }
 
 body {
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem;
-    line-height: 1.6;
-    color: white;
+    color: black;
     /* max-width: 1200px; */
     margin: 0 auto;
     padding: 0px;
 }
 
-#header,
-#main
-{
-  max-width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-
 #header h1
 {
   margin: 0;
-  position: absolute;
-  color: transparent;
+
 }
 
 #header h1 a
@@ -77,13 +66,6 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-}
-
-main {
-    margin-top: 0rem;
-    max-width: 40rem;
-    margin: 0 auto;
-    text-align: center;
 }
 
 section {
@@ -164,9 +146,6 @@ footer {
   position: absolute;
   left: -9999px; 
 }
-
-#body
-
 
 @keyframes pulse
 {
