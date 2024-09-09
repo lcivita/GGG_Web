@@ -7,6 +7,20 @@ fetch('content.xml')
     let pageTitle = xml.getElementsByTagName("title")[0].textContent;
     document.getElementById("page-title").innerHTML = pageTitle;
 
+    let studioName = xml.getElementsByTagName("studio")[0].textContent;
+    document.getElementById("studio-name").innerHTML = studioName;
+
+    let description = xml.getElementsByTagName("description")[0].textContent;
+    document.getElementById("description").innerHTML = description;
+
+    let history = xml.getElementsByTagName("history")[0].textContent;
+    document.getElementById("history").innerHTML = history;
+
+    let features = xml.getElementsByTagName("features")[0].textContent;
+    document.getElementById("features").innerHTML = features;
+
+
+
     // let items = xml.getElementsByTagName('item');
 
     // // Prepare HTML content

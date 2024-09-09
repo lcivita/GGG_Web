@@ -2,22 +2,19 @@
     <title>Press Kit for Goo Goo Grapplers</title>
     <studio>Both Good</studio>
 
-    <inner_content>
-
-        <description>
-        This is where the description of the game goes!
+    <description>
+    This is where the description of the game goes!
         
-        We have multiple lines of text here just to show you cna do this.
-        </description>
+    We have multiple lines of text here just to show you cna do this.
+     </description>
 
-        <history>
-        Write a bit about the history of your studio, the game, the general background of you and your product.
-        </history>
+     <history>
+     Write a bit about the history of your studio, the game, the general background of you and your product.
+     </history>
 
-        <features>
-        Write about the technical features of the game, from gameplay to neat additions like multiplayer or cool integrations.
-        </features>
+     <features>
+     Write about the technical features of the game, from gameplay to neat additions like multiplayer or cool integrations.
+    </features>
 
-    </inner_content>
 
 </content>
