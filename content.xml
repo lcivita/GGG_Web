@@ -3,8 +3,11 @@
     <studio>Both Good</studio>
 
     <description>
-    "This is where the description of the game goes!
-    We have multiple lines of text here just to show you can do this."
+    <! [CDATA[
+    This is where the description of the game goes!
+
+    We have multiple lines of text here just to show you can do this.
+    ]]>
     </description>
 
      <history>
