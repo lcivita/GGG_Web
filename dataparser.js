@@ -4,7 +4,7 @@ fetch('content.xml')
     let parser = new DOMParser();
     let xml = parser.parseFromString(data, "text/xml");
 
-    let pageTitle = xml.getElementsByTagName("title");
+    let pageTitle = xml.getElementsByTagName("title")[0].childNodes[0].nodeValue;
     document.getElementById("page-title").innerHTML = pageTitle;
 
     // let items = xml.getElementsByTagName('item');
