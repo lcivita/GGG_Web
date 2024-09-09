@@ -137,6 +137,10 @@ footer {
     padding: 20px;
 }
 
+p {
+    white-space: pre-line;
+}
+
 .hidden {
   position: absolute;
   left: -9999px; 
