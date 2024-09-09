@@ -4,19 +4,19 @@ fetch('content.xml')
     let parser = new DOMParser();
     let xml = parser.parseFromString(data, "text/xml");
 
-    let pageTitle = xml.getElementsByTagName("title")[0].textContent;
+    let pageTitle = xml.getElementsByTagName("title")[0].innerHTML;
     document.getElementById("page-title").innerHTML = pageTitle;
 
-    let studioName = xml.getElementsByTagName("studio")[0].textContent;
+    let studioName = xml.getElementsByTagName("studio")[0].innerHTML;
     document.getElementById("studio-name").innerHTML = studioName;
 
-    let description = xml.getElementsByTagName("description")[0].textContent;
+    let description = xml.getElementsByTagName("description")[0].innerHTML;
     document.getElementById("description").innerHTML = description;
 
-    let history = xml.getElementsByTagName("history")[0].textContent;
+    let history = xml.getElementsByTagName("history")[0].innerHTML;
     document.getElementById("history").innerHTML = history;
 
-    let features = xml.getElementsByTagName("features")[0].textContent;
+    let features = xml.getElementsByTagName("features")[0].innerHTML;
     document.getElementById("features").innerHTML = features;
 
 

@@ -137,11 +137,6 @@ footer {
     padding: 20px;
 }
 
-#features {
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
 .hidden {
   position: absolute;
   left: -9999px; 

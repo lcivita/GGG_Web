@@ -2,11 +2,9 @@
     <title>Press Kit for Goo Goo Grapplers</title>
     <studio>Both Good</studio>
 
-    <description>
-    This is where the description of the game goes!
+    <description xml:space="preserve">This is where the description of the game goes!
         
-    We have multiple lines of text here just to show you cna do this.
-     </description>
+    We have multiple lines of text here just to show you cna do this.</description>
 
      <history>
      Write a bit about the history of your studio, the game, the general background of you and your product.
