@@ -20,28 +20,28 @@ fetch('content.xml')
     document.getElementById("features").innerHTML = features;
 
     let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
-    document.getElementById("videos").innerHTML = features;
+    document.getElementById("videos").innerHTML = videos;
 
     let images = xml.getElementsByTagName("images")[0].childNodes[0].nodeValue;
-    document.getElementById("images").innerHTML = features;
+    document.getElementById("images").innerHTML = images;
 
     let logoAndIcon = xml.getElementsByTagName("logo_and_icon")[0].childNodes[0].nodeValue;
-    document.getElementById("logo_and_icon").innerHTML = features;
+    document.getElementById("logo_and_icon").innerHTML = logoAndIcon;
 
     let monetization = xml.getElementsByTagName("monetization")[0].childNodes[0].nodeValue;
-    document.getElementById("monetization").innerHTML = features;
+    document.getElementById("monetization").innerHTML = monetization;
 
     let additionalLinks = xml.getElementsByTagName("additional_links")[0].childNodes[0].nodeValue;
-    document.getElementById("additional_links").innerHTML = features;
+    document.getElementById("additional_links").innerHTML = additionalLinks;
 
     let about = xml.getElementsByTagName("about")[0].childNodes[0].nodeValue;
-    document.getElementById("about").innerHTML = features;
+    document.getElementById("about").innerHTML = about;
 
     let credits = xml.getElementsByTagName("credits")[0].childNodes[0].nodeValue;
-    document.getElementById("credits").innerHTML = features;
+    document.getElementById("credits").innerHTML = credits;
 
     let contact = xml.getElementsByTagName("contact")[0].childNodes[0].nodeValue;
-    document.getElementById("contact").innerHTML = features;
+    document.getElementById("contact").innerHTML = contact;
 
 
 
