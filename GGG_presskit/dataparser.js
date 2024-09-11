@@ -19,6 +19,30 @@ fetch('content.xml')
     let features = xml.getElementsByTagName("features")[0].childNodes[0].nodeValue;
     document.getElementById("features").innerHTML = features;
 
+    let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
+    document.getElementById("videos").innerHTML = features;
+
+    let images = xml.getElementsByTagName("images")[0].childNodes[0].nodeValue;
+    document.getElementById("images").innerHTML = features;
+
+    let logoAndIcon = xml.getElementsByTagName("logo_and_icon")[0].childNodes[0].nodeValue;
+    document.getElementById("logo_and_icon").innerHTML = features;
+
+    let monetization = xml.getElementsByTagName("monetization")[0].childNodes[0].nodeValue;
+    document.getElementById("monetization").innerHTML = features;
+
+    let additionalLinks = xml.getElementsByTagName("additional_links")[0].childNodes[0].nodeValue;
+    document.getElementById("additional_links").innerHTML = features;
+
+    let about = xml.getElementsByTagName("about")[0].childNodes[0].nodeValue;
+    document.getElementById("about").innerHTML = features;
+
+    let credits = xml.getElementsByTagName("credits")[0].childNodes[0].nodeValue;
+    document.getElementById("credits").innerHTML = features;
+
+    let contact = xml.getElementsByTagName("contact")[0].childNodes[0].nodeValue;
+    document.getElementById("contact").innerHTML = features;
+
 
 
     // let items = xml.getElementsByTagName('item');
