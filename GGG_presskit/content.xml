@@ -8,7 +8,26 @@
 
      <history>Write a bit about the history of your studio, the game, the general background of you and your product.</history>
 
-     <features>Write about the technical features of the game, from gameplay to neat additions like multiplayer or cool integrations.</features>
+     <features>- Write about the technical features of the game, from gameplay to neat additions like multiplayer or cool integrations.</features>
+     <features>- There are multiple lines here since these should be bullet points.</features>
+
+     <videos>Drop some links here, YouTube or Vimeo preferred!</videos>
+
+     <images>Some images, from the game or of the game.</images>
+
+     <logo_and_icon>Where the logo for the game and studio go. Hi-res please!</logo_and_icon>
+
+    <!-- Selected articles to come! -->
+
+    <monetization>Your legal spiel on what is and isn't allowed to be monetized.</monetization>
+
+    <additional_links>Extra links go here.</additional_links>
+
+    <about>The About blurb about the studio!</about>
+
+    <contact>Business inqueries email</contact>
+    <contact>Press inqueries email</contact>
+    <contact>Link to site</contact>
 
 
 </content>
