@@ -31,16 +31,16 @@ fetch('content.xml')
     //     featuresContent += "</ul>";
  
     //  // Insert the content into the target document
-    //  document.getElementById('features').innerHTML = featuresContent;
+    let features = xml.getElementsByTagName('feature');
+    document.getElementById('features').innerHTML = features;
 
         // Access the <feature> elements
-        let features = xml.getElementsByTagName('feature');
 
-        // Loop through each <feature> and log or use its content
-        for (let i = 0; i < features.length; i++) {
-            let featureText = features[i].textContent.trim();
-            console.log(`Feature ${i + 1}: ${featureText}`);
-        }
+        // // Loop through each <feature> and log or use its content
+        // for (let i = 0; i < features.length; i++) {
+        //     let featureText = features[i].textContent.trim();
+        //     console.log(`Feature ${i + 1}: ${featureText}`);
+        // }
 
     let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
     document.getElementById("videos").innerHTML = videos;
