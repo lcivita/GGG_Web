@@ -19,19 +19,25 @@ fetch('content.xml')
     // let features = xml.getElementsByTagName("features")[0].childNodes[0].nodeValue;
     // document.getElementById("features").innerHTML = features;
 
-     let features = xml.getElementsByTagName('feature');
+    //  let features = xml.getElementsByTagName('feature')[0];
 
-     var featuresContent = "<ul>";
-        for (let i = 0; i < features.length; i++) {
-                // Extract the text content of each <feature> tag
-                let featureText = features[i].textContent;
-                featuresContent += `<li>${featureText}</li>`;
-                console.log(features[i]);
-            }
-        featuresContent += "</ul>";
+    //  var featuresContent = "<ul>";
+    //     for (let i = 0; i < features.length; i++) {
+    //             // Extract the text content of each <feature> tag
+    //             let featureText = features[i].textContent;
+    //             featuresContent += `<li>${featureText}</li>`;
+    //             console.log(features[i]);
+    //         }
+    //     featuresContent += "</ul>";
  
-     // Insert the content into the target document
-     document.getElementById('features').innerHTML = featuresContent;
+    //  // Insert the content into the target document
+    //  document.getElementById('features').innerHTML = featuresContent;
+
+    let feature1 = xml.getElementsByTagName("feature")[0].childNodes[0].nodeValue;
+
+    let feature2 = xml.getElementsByTagName("feature")[1].childNodes[0].nodeValue;
+
+    document.getElementById("features").innerHTML = feature1 + feature2;
 
     let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
     document.getElementById("videos").innerHTML = videos;
