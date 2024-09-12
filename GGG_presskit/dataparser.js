@@ -21,11 +21,11 @@ fetch('content.xml')
 
      let features = xml.getElementsByTagName('features');
 
-     let content = "";
+     let featuresContent = "";
         for (let i = 0; i < features.length; i++) {
                 // Extract the text content of each <feature> tag
                 let featureText = features[i].textContent;
-                content += `<ul>${featureText}</ul>`;
+                featuresContent += `<ul>${featureText}</ul>`;
             }
  
      // Insert the content into the target document
