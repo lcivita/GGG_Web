@@ -18,7 +18,7 @@ fetch('content.xml')
 
     ///trouble area
  
-    let features = xml.getElementsByTagName('feature');
+    let features = xml.getElementsByTagName('feature')[0].childNodes[0].nodeValue;
     document.getElementById('features').innerHTML = features;
 
     ///trouble area
