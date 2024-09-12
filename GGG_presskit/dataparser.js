@@ -26,6 +26,7 @@ fetch('content.xml')
                 // Extract the text content of each <feature> tag
                 let featureText = features[i].textContent;
                 featuresContent += `<li>${featureText}</li>`;
+                console.log(features[i]);
             }
         featuresContent += "</ul>";
  
