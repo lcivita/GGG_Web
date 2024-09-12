@@ -31,7 +31,7 @@ fetch('content.xml')
     //     featuresContent += "</ul>";
  
     //  // Insert the content into the target document
-    let features = xml.getElementsByTagName('feature');
+    let features = xml.getElementsByTagName('feature')[0];
     document.getElementById('features').innerHTML = features;
 
         // Access the <feature> elements
