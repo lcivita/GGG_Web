@@ -35,9 +35,9 @@ fetch('content.xml')
 
     let feature1 = xml.getElementsByTagName("feature")[0].childNodes[0].nodeValue;
 
-    let feature2 = xml.getElementsByTagName("feature")[1].childNodes[0].nodeValue;
+    // let feature2 = xml.getElementsByTagName("feature")[1].childNodes[0].nodeValue;
 
-    document.getElementById("features").innerHTML = feature1 + feature2;
+    document.getElementById("features").innerHTML = feature1;
 
     let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
     document.getElementById("videos").innerHTML = videos;
