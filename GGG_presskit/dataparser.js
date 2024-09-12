@@ -16,31 +16,12 @@ fetch('content.xml')
     let history = xml.getElementsByTagName("history")[0].childNodes[0].nodeValue;
     document.getElementById("history").innerHTML = history;
 
-    // let features = xml.getElementsByTagName("features")[0].childNodes[0].nodeValue;
-    // document.getElementById("features").innerHTML = features;
-
-    //  let features = xml.getElementsByTagName('feature')[0];
-
-    //  var featuresContent = "<ul>";
-    //     for (let i = 0; i < features.length; i++) {
-    //             // Extract the text content of each <feature> tag
-    //             let featureText = features[i].textContent;
-    //             featuresContent += `<li>${featureText}</li>`;
-    //             console.log(features[i]);
-    //         }
-    //     featuresContent += "</ul>";
+    ///trouble area
  
-    //  // Insert the content into the target document
-    let features = xml.getElementsByTagName('feature')[0].textContent;
+    let features = xml.getElementsByTagName('feature');
     document.getElementById('features').innerHTML = features;
 
-        // Access the <feature> elements
-
-        // // Loop through each <feature> and log or use its content
-        // for (let i = 0; i < features.length; i++) {
-        //     let featureText = features[i].textContent.trim();
-        //     console.log(`Feature ${i + 1}: ${featureText}`);
-        // }
+    ///trouble area
 
     let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
     document.getElementById("videos").innerHTML = videos;
