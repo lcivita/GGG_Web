@@ -17,9 +17,30 @@ fetch('content.xml')
     document.getElementById("history").innerHTML = history;
 
     ///trouble area
+
+    let features = xml.getElementsByTagName('feature');
+
+    let featuresList = document.getElementById("features-list");
+        for (let i = 0; i < features.length; i++) {
+            console.log(features[i].childNodes[0].nodeValue);
+            // Extract the text content of each <feature> tag
+            let featureText = features[i].childNodes[0].nodeValue;
+            let li = document.createElement("li");
+            li.innerHTML = featureText;
+            featuresList.appendChild(li);
+        }
+    
  
-    let features = xml.getElementsByTagName('feature')[0].childNodes[0].nodeValue;
-    document.getElementById('features').innerHTML = features;
+    
+    // let ul = document.getElementById("features-list");
+
+    // for (let i = 0; i < features.length; i++){
+    //     console.log(xml.getElementsByTagName('feature')[i].childNodes[0].nodeValue)
+    //     let li = document.createElement("li");
+    //     li.innerHTML = xml.getElementsByTagName('feature')[i].childNodes[0].nodeValue;
+    //     ul.appendChild(li);
+    // }
+    // document.getElementById('features').innerHTML = features;
 
     ///trouble area
 
