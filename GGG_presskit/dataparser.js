@@ -21,7 +21,7 @@ fetch('content.xml')
 
      let features = xml.getElementsByTagName('features');
 
-     let featuresContent = "";
+     var featuresContent = "";
         for (let i = 0; i < features.length; i++) {
                 // Extract the text content of each <feature> tag
                 let featureText = features[i].textContent;
