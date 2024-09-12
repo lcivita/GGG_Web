@@ -19,9 +19,9 @@ fetch('content.xml')
     // let features = xml.getElementsByTagName("features")[0].childNodes[0].nodeValue;
     // document.getElementById("features").innerHTML = features;
 
-     let features = xml.getElementsByTagName('features');
+     let features = xml.getElementsByTagName('feature');
 
-     var featuresContent = "";
+     var featuresContent;
         for (let i = 0; i < features.length; i++) {
                 // Extract the text content of each <feature> tag
                 let featureText = features[i].textContent;
