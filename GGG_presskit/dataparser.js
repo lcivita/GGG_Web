@@ -33,11 +33,14 @@ fetch('content.xml')
     //  // Insert the content into the target document
     //  document.getElementById('features').innerHTML = featuresContent;
 
-    let feature1 = xml.getElementsByTagName("feature").childNodes[0].nodeValue;
+        // Access the <feature> elements
+        let features = xml.getElementsByTagName('feature');
 
-    // let feature2 = xml.getElementsByTagName("feature")[1].childNodes[0].nodeValue;
-
-    document.getElementById("features").innerHTML = feature1;
+        // Loop through each <feature> and log or use its content
+        for (let i = 0; i < features.length; i++) {
+            let featureText = features[i].textContent.trim();
+            console.log(`Feature ${i + 1}: ${featureText}`);
+        }
 
     let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
     document.getElementById("videos").innerHTML = videos;
