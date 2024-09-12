@@ -33,7 +33,7 @@ fetch('content.xml')
     //  // Insert the content into the target document
     //  document.getElementById('features').innerHTML = featuresContent;
 
-    let feature1 = xml.getElementsByTagName("feature")[0].childNodes[0].nodeValue;
+    let feature1 = xml.getElementsByTagName("feature").childNodes[0].nodeValue;
 
     // let feature2 = xml.getElementsByTagName("feature")[1].childNodes[0].nodeValue;
 
