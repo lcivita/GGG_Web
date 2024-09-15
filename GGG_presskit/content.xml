@@ -8,11 +8,15 @@
 
      <history>Write a bit about the history of your studio, the game, the general background of you and your product.</history>
 
+    <!-- List all features in individual feature tags. They'll be turned into bullet points on the front end. -->
+
      <feature>Write about the technical features of the game, from gameplay to neat additions like multiplayer or cool integrations.</feature>
      <feature>There are multiple lines here since these should be bullet points.</feature>
      <feature>Another bullet to be sure the bullet point system is working.</feature>
 
-     <videos>Drop some links here, YouTube or Vimeo preferred!</videos>
+    <!-- Just put the links to YouTube or Vimeo embeds here. One per element. -->
+
+     <video>https://youtu.be/lYwQVl5_YnQ?si=PqrJ4AaH6bpsLdXY</video>
 
      <images>Some images, from the game or of the game.</images>
 

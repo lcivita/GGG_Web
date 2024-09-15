@@ -16,36 +16,30 @@ fetch('content.xml')
     let history = xml.getElementsByTagName("history")[0].childNodes[0].nodeValue;
     document.getElementById("history").innerHTML = history;
 
-    ///trouble area
-
     let features = xml.getElementsByTagName('feature');
 
     let featuresList = document.getElementById("features-list");
         for (let i = 0; i < features.length; i++) {
             console.log(features[i].childNodes[0].nodeValue);
-            // Extract the text content of each <feature> tag
             let featureText = features[i].childNodes[0].nodeValue;
             let li = document.createElement("li");
             li.innerHTML = featureText;
             featuresList.appendChild(li);
         }
-    
- 
-    
-    // let ul = document.getElementById("features-list");
 
-    // for (let i = 0; i < features.length; i++){
-    //     console.log(xml.getElementsByTagName('feature')[i].childNodes[0].nodeValue)
-    //     let li = document.createElement("li");
-    //     li.innerHTML = xml.getElementsByTagName('feature')[i].childNodes[0].nodeValue;
-    //     ul.appendChild(li);
-    // }
-    // document.getElementById('features').innerHTML = features;
+        let videos = xml.getElementsByTagName('video');
 
-    ///trouble area
+        let videoList = document.getElementById("videos-list");
+            for (let i = 0; i < videos.length; i++) {
+                console.log(videos[i].childNodes[0].nodeValue);
+                let videoSrc = videos[i].childNodes[0].nodeValue;
+                let embed = document.createElement("iframe");
+                embed.src = videoSrc;
+                videoList.appendChild(embed);
+            }
 
-    let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
-    document.getElementById("videos").innerHTML = videos;
+    // let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
+    // document.getElementById("videos").innerHTML = videos;
 
     let images = xml.getElementsByTagName("images")[0].childNodes[0].nodeValue;
     document.getElementById("images").innerHTML = images;
