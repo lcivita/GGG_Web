@@ -14,24 +14,36 @@
      <feature>There are multiple lines here since these should be bullet points.</feature>
      <feature>Another bullet to be sure the bullet point system is working.</feature>
 
-    <!-- Just put the links to YouTube or Vimeo embeds here. One per element. -->
+    <!-- Just the end of a given YouTube link, after watch?v=. One per element. -->
 
-     <video>https://youtu.be/lYwQVl5_YnQ?si=PqrJ4AaH6bpsLdXY</video>
+     <video>lYwQVl5_YnQ</video>
+     <video>LyM1UGD8sqM</video>
 
-     <images>Some images, from the game or of the game.</images>
+     <!-- The file name of whichever image you want shown in the "imgAndVid" folder! -->
 
-     <logo_and_icon>Where the logo for the game and studio go. Hi-res please!</logo_and_icon>
+     <images>slideshow1_image1.jpg</images>
+     <images>slideshow1_image2.png</images>
+     <images>slideshow1_image2.png</images>
+
+     <!-- The file name of whichever logo you want shown in the "imgAndVid" folder! -->
+
+     <logo_and_icon>BothGood_Logo_Web.png</logo_and_icon>
 
     <!-- Selected articles to come! -->
 
     <monetization>Your legal spiel on what is and isn't allowed to be monetized.</monetization>
 
-    <additional_links>Extra links go here.</additional_links>
+    <!-- Links have "link_text," which is what links will embed into, and "link," which is the actual link -->
+    <!-- Keep them in this relative order, just copy + paste where needed -->
+
+    <link>https://www.youtube.com/watch?v=LQcMOI8dMas</link>
+    <link_text>Links go here.</link_text>
 
     <about>The About blurb about the studio!</about>
 
-    <credits>Credits for the game!</credits>
-    <credits>There will be several of these!</credits>
+    <credit-name>Credits for the game!</credit-name>
+    <credit-subtitle>There will be several of these!</credit-subtitle>
+    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
 
     <contact>Business inqueries email</contact>
     <contact>Press inqueries email</contact>

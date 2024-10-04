@@ -20,7 +20,6 @@ fetch('content.xml')
 
     let featuresList = document.getElementById("features-list");
         for (let i = 0; i < features.length; i++) {
-            console.log(features[i].childNodes[0].nodeValue);
             let featureText = features[i].childNodes[0].nodeValue;
             let li = document.createElement("li");
             li.innerHTML = featureText;
@@ -31,33 +30,68 @@ fetch('content.xml')
 
         let videoList = document.getElementById("videos-list");
             for (let i = 0; i < videos.length; i++) {
-                console.log(videos[i].childNodes[0].nodeValue);
                 let videoSrc = videos[i].childNodes[0].nodeValue;
                 let embed = document.createElement("iframe");
-                embed.src = videoSrc;
+                embed.src = "https://www.youtube.com/embed/"+ videoSrc;
                 videoList.appendChild(embed);
             }
 
-    // let videos = xml.getElementsByTagName("videos")[0].childNodes[0].nodeValue;
-    // document.getElementById("videos").innerHTML = videos;
+    let images = xml.getElementsByTagName("images");
+    let imageList = document.getElementById("images-list");
+            for (let i = 0; i < images.length; i++) {
+                let imgSrc = images[i].childNodes[0].nodeValue;
+                let embed = document.createElement("img");
+                embed.src = "imgAndVid/" + imgSrc;
+                imageList.appendChild(embed);
+            }
 
-    let images = xml.getElementsByTagName("images")[0].childNodes[0].nodeValue;
-    document.getElementById("images").innerHTML = images;
-
-    let logoAndIcon = xml.getElementsByTagName("logo_and_icon")[0].childNodes[0].nodeValue;
-    document.getElementById("logo_and_icon").innerHTML = logoAndIcon;
+    let logos = xml.getElementsByTagName("logo_and_icon");
+    let logosList = document.getElementById("logo-and-icon-list");
+        for (let i = 0; i < logos.length; i++) {
+            let logosSrc = logos[i].childNodes[0].nodeValue;
+            let embed = document.createElement("img");
+            embed.src = "imgAndVid/" + logosSrc;
+            logosList.appendChild(embed);
+        }
 
     let monetization = xml.getElementsByTagName("monetization")[0].childNodes[0].nodeValue;
     document.getElementById("monetization").innerHTML = monetization;
 
-    let additionalLinks = xml.getElementsByTagName("additional_links")[0].childNodes[0].nodeValue;
-    document.getElementById("additional_links").innerHTML = additionalLinks;
+    let linkText = xml.getElementsByTagName("link_text");
+    let links = xml.getElementsByTagName("link");
+    let addtlLinksList = document.getElementById("additional-links-list");
+    for (let i = 0; i < links.length; i++) {
+        let linksSrc = links[i].childNodes[0].nodeValue;
+        let linksTextSrc = linkText[i].childNodes[0].nodeValue;
+        let linkInnerText = document.createTextNode(linksTextSrc);
+        let link = document.createElement("a");
+        link.href = linksSrc;
+        link.appendChild(linkInnerText);
+        addtlLinksList.appendChild(link);
+    }
 
     let about = xml.getElementsByTagName("about")[0].childNodes[0].nodeValue;
-    document.getElementById("about").innerHTML = about;
+    document.getElementById("about").innerHTML = about;;
 
-    let credits = xml.getElementsByTagName("credits")[0].childNodes[0].nodeValue;
-    document.getElementById("credits").innerHTML = credits;
+    let creditSubtitle = xml.getElementsByTagName("credit-subtitle");
+    let creditName = xml.getElementsByTagName("credit-name");
+    let creditLink = xml.getElementsByTagName("credit-link");
+    let creditsList = document.getElementById("credits-list");
+    for (let i = 0; i < creditLink.length; i++) {
+        let linksSrc = creditLink[i].childNodes[0].nodeValue;
+        let linksTextSrc = creditSubtitle[i].childNodes[0].nodeValue;
+        let titleSrc = creditName[i].childNodes[0].nodeValue;
+        let title = document.createElement("p");
+        title.innerHTML = titleSrc;
+        let linkSubtitleText = document.createTextNode(linksTextSrc);
+        //linkSubtitleText.classList.add("subtitle")
+        let link = document.createElement("a");
+        link.className = "subtitle";
+        link.href = linksSrc;
+        link.appendChild(linkSubtitleText);
+        creditsList.appendChild(title);
+        creditsList.appendChild(link);
+    }
 
     let contact = xml.getElementsByTagName("contact")[0].childNodes[0].nodeValue;
     document.getElementById("contact").innerHTML = contact;
