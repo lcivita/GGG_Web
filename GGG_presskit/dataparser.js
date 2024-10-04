@@ -32,6 +32,7 @@ fetch('content.xml')
             for (let i = 0; i < videos.length; i++) {
                 let videoSrc = videos[i].childNodes[0].nodeValue;
                 let embed = document.createElement("iframe");
+                embed.className = "embedded-video";
                 embed.src = "https://www.youtube.com/embed/"+ videoSrc;
                 videoList.appendChild(embed);
             }
@@ -41,6 +42,7 @@ fetch('content.xml')
             for (let i = 0; i < images.length; i++) {
                 let imgSrc = images[i].childNodes[0].nodeValue;
                 let embed = document.createElement("img");
+                embed.className = "embedded-image";
                 embed.src = "imgAndVid/" + imgSrc;
                 imageList.appendChild(embed);
             }
@@ -93,8 +95,24 @@ fetch('content.xml')
         creditsList.appendChild(link);
     }
 
-    let contact = xml.getElementsByTagName("contact")[0].childNodes[0].nodeValue;
-    document.getElementById("contact").innerHTML = contact;
+    let contactInfo = xml.getElementsByTagName("contact");
+    contact = document.getElementById("contact");
+    for (let i = 0; i < contactInfo.length; i++) {
+        let contactText = contactInfo[i].childNodes[0].nodeValue;
+        let text = document.createElement("p");
+        text.className = "contact";
+        text.innerHTML = contactText
+        contact.appendChild(text);
+    }
+
+    let siteLink = xml.getElementsByTagName("site-link")[0].childNodes[0].nodeValue;
+    let siteInnerText = document.createTextNode(siteLink);
+    let siteText = document.createElement("a");
+    siteText.className = "contact";
+    siteText.href = siteLink;
+    siteText.appendChild(siteInnerText);
+    contact.appendChild(siteText);
+
 
 
 

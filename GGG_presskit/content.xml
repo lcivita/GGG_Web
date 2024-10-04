@@ -1,6 +1,6 @@
 <content>
     <title>Press Kit for Goo Goo Grapplers</title>
-    <studio>Both Good</studio>
+    <studio>A Game from Both Good</studio>
 
     <description>This is where the description of the game goes!
 
@@ -45,9 +45,14 @@
     <credit-subtitle>There will be several of these!</credit-subtitle>
     <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
 
-    <contact>Business inqueries email</contact>
-    <contact>Press inqueries email</contact>
-    <contact>Link to site</contact>
+    <contact>Business inqueries email:</contact>
+    <contact>[email here]</contact>
+    <contact>Press inqueries email:</contact>
+    <contact>[email here]</contact>
+    <contact>Website:</contact>
+
+    <site-title>[site name here]</site-title>
+    <site-link>https://www.googoograpplers.com/</site-link>
 
 
 </content>
