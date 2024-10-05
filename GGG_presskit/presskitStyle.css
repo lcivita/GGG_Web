@@ -10,7 +10,8 @@
 
 #nav-container {
     width: 20%;
-    padding-left: 10%;
+    padding-left: 5%;
+    margin-right: 5%;
 }
 
 nav {
@@ -70,4 +71,38 @@ p {
     height: 0px;
     width: 50%;
     border: 1px solid black;
+}
+
+
+@media only screen and (max-width: 900px) {
+    #content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-margins {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+    #nav-container {
+        position: relative;
+        width: 100%;
+        align-items: center;
+        /* transform: translateX(-300px); */
+        padding-left: 0px;
+        margin-right: 0px;
+    }
+
+    .the-nav {
+        display: none;
+        height: 0%;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    #nav-hed {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }

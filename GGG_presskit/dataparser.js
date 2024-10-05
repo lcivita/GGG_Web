@@ -130,3 +130,17 @@ fetch('content.xml')
     // document.getElementById('content').innerHTML = content;
 })
 .catch(error => console.error('Error fetching XML:', error));
+
+document.querySelector(".the-nav").style.display = "none";
+
+function menu(){
+    if(document.querySelector(".the-nav").style.display === "none"){
+        document.querySelector(".the-nav").style.display = "flex";
+    }
+    else{
+        document.querySelector(".the-nav").style.display = "none";
+    }
+}
+
+document.getElementById("nav-hed").addEventListener("touchstart", menu);
+document.getElementById("nav-hed").addEventListener("click", menu);
