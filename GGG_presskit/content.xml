@@ -1,25 +1,25 @@
 <content>
     <title>Goo Goo Grapplers Press Kit</title>
     <studio>A Game by Both Good</studio>
-    <meta-description></meta-description>
-
-    <description>Goo Goo Grapplers is 1v1 Couch battle arena where you compete with your twin to see who is truly 
-        the better baby. Gather “Toy Parts” in exchange for powerful new abilities and upgrades that you can 
-        mix and match however you see fit. Shoot some milk, swing a rattle, and toot your way to victory as you lead an army of imaginary friends to take down your siblings pillow fort in this whacky little 
-        world.</description>
-
-     <history>From the beginning Goo Goo Grapplers had the goal to bring together elements from two very 
-         different places- Platform fighters and MOBAs. In 2023 the first prototype was born, manifesting as 
-         something between a tower defense and a fighting game. And while fun, like many prototypes it 
-         wasn’t ready to be developed further, and the idea was put to rest. However, after a year more of 
-         experience working on various games and gradually getting a small team together, Goo Goo 
-         Grapplers awoke from its nap. In it’s new form GGG takes a different approach, bringing together the 
-         gameplay, flow and strategy of a MOBA and the accessible, goofy couch fun of a platform fighter. 
-         Committed to its development and release, “Both Good” was formed in 2024. The new studio’s aim 
-         was not only set on completing and releasing GGG, but also on beginning the early stages of future 
-         IPs that are yet to be revealed.</history>
-
-    <!-- List all features in individual feature tags. They'll be turned into bullet points on the front end. -->
+    <!-- <meta-description></meta-description>-->
+ 
+     <description>Goo Goo Grapplers is 1v1 Couch battle arena where you compete with your twin to see who is truly 
+         the better baby. Gather “Toy Parts” in exchange for powerful new abilities and upgrades that you can 
+         mix and match however you see fit. Shoot some milk, swing a rattle, and toot your way to victory as you lead an army of imaginary friends to take down your siblings pillow fort in this whacky little 
+         world.</description>
+ 
+      <history>From the beginning Goo Goo Grapplers had the goal to bring together elements from two very 
+          different places- Platform fighters and MOBAs. In 2023 the first prototype was born, manifesting as 
+          something between a tower defense and a fighting game. And while fun, like many prototypes it 
+          wasn’t ready to be developed further, and the idea was put to rest. However, after a year more of 
+          experience working on various games and gradually getting a small team together, Goo Goo 
+          Grapplers awoke from its nap. In it’s new form GGG takes a different approach, bringing together the 
+          gameplay, flow and strategy of a MOBA and the accessible, goofy couch fun of a platform fighter. 
+          Committed to its development and release, “Both Good” was formed in 2024. The new studio’s aim 
+          was not only set on completing and releasing GGG, but also on beginning the early stages of future 
+          IPs that are yet to be revealed.</history>
+ 
+     <!-- List all features in individual feature tags. They'll be turned into bullet points on the front end. -->
 
      <feature>Same-screen local multiplayer with dynamic split screen</feature>
      <feature>Dozens of unique ability and upgrade combinations</feature>
@@ -48,7 +48,7 @@
     <monetization>Both Good allows for the contents of Goo Goo Grapplers to be
         published through video broadcasting services for any commercial or
         non-commercial purposes. Monetization of videos created containing
-        assets from Goo Goo Grapplers is legally & explicitly allowed
+        assets from Goo Goo Grapplers is legally &amp; explicitly allowed
         by Both Good. This permission can be found in writing at
         https://www.googoograpplers.com/GGG_presskit/presskit.</monetization>
 
@@ -66,6 +66,26 @@
     <credit-name>Luca Civita</credit-name>
     <credit-subtitle>Lead Developer, Programmer, Artist, Co-founder</credit-subtitle>
     <credit-link>https://www.lucacivita.com/</credit-link>
+    
+    <credit-name>Justin Cook</credit-name>
+    <credit-subtitle>Game Designer, Operations, Co-founder</credit-subtitle>
+    
+    <credit-name>Jason Li</credit-name>
+    <credit-subtitle>Production Planning, Technical Direction</credit-subtitle>
+    <credit-link>https://ovenfresh.itch.io/</credit-link>
+    
+    <credit-name>Jay Tobin</credit-name>
+    <credit-subtitle>Audio Design, Composer, SEO</credit-subtitle>
+    
+    <credit-name>Ally Luo</credit-name>
+    <credit-subtitle>Web Developer</credit-subtitle>
+    
+    <credit-name>Zachary Mezzo</credit-name>
+    <credit-subtitle>Composer</credit-subtitle>
+    
+    <credit-name>Sanjay Henry</credit-name>
+    <credit-subtitle>Composer</credit-subtitle>
+    
 
    <contact>Business inqueries email:</contact>
    <contact>BothGood@bothgood.games</contact>
