@@ -41,10 +41,16 @@
      <!-- The file name of whichever logo you want shown in the "imgAndVid" folder! -->
 
      <logo_and_icon>BothGood_Logo_Web.png</logo_and_icon>
+     <logo_and_icon>GGG_Logo_Web.png</logo_and_icon>
 
     <!-- Selected articles to come! -->
 
-    <monetization>Your legal spiel on what is and isn't allowed to be monetized.</monetization>
+    <monetization>Both Good allows for the contents of Goo Goo Grapplers to be
+        published through video broadcasting services for any commercial or
+        non-commercial purposes. Monetization of videos created containing
+        assets from Goo Goo Grapplers is legally & explicitly allowed
+        by Both Good. This permission can be found in writing at
+        https://www.googoograpplers.com/GGG_presskit/presskit.</monetization>
 
     <!-- Links have "link_text," which is what links will embed into, and "link," which is the actual link -->
     <!-- Keep them in this relative order, just copy + paste where needed -->
@@ -52,20 +58,38 @@
     <link>https://www.youtube.com/watch?v=LQcMOI8dMas</link>
     <link_text>Links go here.</link_text>
 
-    <about>The About blurb about the studio!</about>
+    <about>Founded in 2024 Both Good is an independent game studio located in Brooklyn, NY. We believe in 
+        the importance of “play” and games bringing people together. We design games that are friendly 
+        and inviting, but with gameplay that can be taken seriously. Our team is dedicated to creating games 
+        that we ourselves want to play, and think are worth sharing.</about>
 
-    <credit-name>Credits for the game!</credit-name>
-    <credit-subtitle>There will be several of these!</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
+    <credit-name>Luca Civita</credit-name>
+    <credit-subtitle>Lead Developer, Programmer, Artist, Co-founder</credit-subtitle>
+    <credit-name>Justin Cook</credit-name>
+    <credit-subtitle>Game Designer, Operations, Co-founder</credit-subtitle>
+    <credit-name>Jason Li</credit-name>
+    <credit-subtitle>Production &amp; Planning, Technical Direction</credit-subtitle>
+    <credit-name>Jay Tobin</credit-name>
+    <credit-subtitle>Audio Design, Composer</credit-subtitle>
+    <credit-name>Jay Tobin</credit-name>
+    <credit-subtitle>Audio Design, Composer, SEO</credit-subtitle>
+    <credit-name>Ally Luo</credit-name>
+    <credit-subtitle>Web Developer</credit-subtitle>
+    <credit-name>Zachary Mezzo</credit-name>
+    <credit-subtitle>Composer</credit-subtitle>
+    <credit-name>Sanjay Henry</credit-name>
+    <credit-subtitle>Composer</credit-subtitle>
+    
+    <!--<credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>-->
 
-    <contact>Business inqueries email:</contact>
-    <contact>[email here]</contact>
-    <contact>Press inqueries email:</contact>
-    <contact>[email here]</contact>
-    <contact>Website:</contact>
+   <contact>Business inqueries email:</contact>
+   <contact>BothGood@bothgood.games</contact>
+   <contact>Press inqueries email:</contact>
+   <contact>contact@googoograpplers.com</contact>
+   <!-- <contact>Website:</contact>-->
 
-    <site-title>[site name here]</site-title>
-    <site-link>https://www.googoograpplers.com/</site-link>
+ <site-title>Goo Goo Grapplers</site-title>
+ <site-link>https://www.googoograpplers.com/</site-link>
 
 
 </content>
