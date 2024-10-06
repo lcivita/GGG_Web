@@ -60,7 +60,8 @@
     <!-- Keep them in this relative order, just copy + paste where needed -->
 
     <link>https://www.googoograpplers.com/</link>
-    <link_text>Main Site</link_text>
+    <link_text>Main Site
+    </link_text>
     <link>https://www.youtube.com/@BothGoodGames</link>
     <link_text>Youtube Channel</link_text>
     
