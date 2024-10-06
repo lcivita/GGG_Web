@@ -59,9 +59,11 @@
     <!-- Links have "link_text," which is what links will embed into, and "link," which is the actual link -->
     <!-- Keep them in this relative order, just copy + paste where needed -->
 
-    <!--<link>https://www.youtube.com/watch?v=LQcMOI8dMas</link>-->
-    <!--<link_text>Game Preview</link_text>-->
-
+    <link>https://www.googoograpplers.com/</link>
+    <link_text>Main Site</link_text>
+    <link>https://www.youtube.com/@BothGoodGames</link>
+    <link_text>Youtube Channel</link_text>
+    
     <about>Founded in 2024 Both Good is an independent game studio located in Brooklyn, NY. We believe in 
         the importance of “play” and games bringing people together. We design games that are friendly 
         and inviting, but with gameplay that can be taken seriously. Our team is dedicated to creating games 
@@ -72,7 +74,6 @@
         <credit-link>https://www.lucacivita.com/</credit-link>
         <credit-name>Justin Cook</credit-name>
         <credit-subtitle>Game Designer, Operations, Co-founder</credit-subtitle>
-        <credit-link>https://www.lucacivita.com/</credit-link>
         <credit-name>Jason Li</credit-name>
         <credit-subtitle>Production Planning, Technical Direction</credit-subtitle>
         <credit-link>https://ovenfresh.itch.io/</credit-link>
@@ -81,13 +82,10 @@
         <credit-link>https://dayflowerstudio.com/work/</credit-link>
         <credit-name>Ally Luo</credit-name>
         <credit-subtitle>Web Developer</credit-subtitle>
-        <credit-link>https://www.lucacivita.com/</credit-link>
         <credit-name>Zachary Mezzo</credit-name>
         <credit-subtitle>Composer</credit-subtitle>
-        <credit-link>https://www.lucacivita.com/</credit-link>
         <credit-name>Sanjay Henry</credit-name>
         <credit-subtitle>Composer</credit-subtitle>
-        <credit-link>https://www.lucacivita.com/</credit-link>
 
    <contact>Business inqueries email:</contact>
    <contact>BothGood@bothgood.games</contact>
