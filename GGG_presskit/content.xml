@@ -56,7 +56,7 @@
     <!-- Keep them in this relative order, just copy + paste where needed -->
 
     <link>https://www.youtube.com/watch?v=LQcMOI8dMas</link>
-    <link_text>Links go here.</link_text>
+    <link_text>Game Preview</link_text>
 
     <about>Founded in 2024 Both Good is an independent game studio located in Brooklyn, NY. We believe in 
         the importance of “play” and games bringing people together. We design games that are friendly 
@@ -66,29 +66,6 @@
     <credit-name>Luca Civita</credit-name>
     <credit-subtitle>Lead Developer, Programmer, Artist, Co-founder</credit-subtitle>
     <credit-link>https://www.lucacivita.com/</credit-link>
-    <credit-name>Justin Cook</credit-name>
-    <credit-subtitle>Game Designer, Operations, Co-founder</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
-    <credit-name>Jason Li</credit-name>
-    <credit-subtitle>Production Planning, Technical Direction</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
-    <credit-name>Jay Tobin</credit-name>
-    <credit-subtitle>Audio Design, Composer</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
-    <credit-name>Jay Tobin</credit-name>
-    <credit-subtitle>Audio Design, Composer, SEO</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
-    <credit-name>Ally Luo</credit-name>
-    <credit-subtitle>Web Developer</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
-    <credit-name>Zachary Mezzo</credit-name>
-    <credit-subtitle>Composer</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
-    <credit-name>Sanjay Henry</credit-name>
-    <credit-subtitle>Composer</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
-    
-    <!--<credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>-->
 
    <contact>Business inqueries email:</contact>
    <contact>BothGood@bothgood.games</contact>
