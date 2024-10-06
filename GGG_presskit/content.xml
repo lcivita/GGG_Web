@@ -59,8 +59,8 @@
     <!-- Links have "link_text," which is what links will embed into, and "link," which is the actual link -->
     <!-- Keep them in this relative order, just copy + paste where needed -->
 
-    <link>https://www.youtube.com/watch?v=LQcMOI8dMas</link>
-    <link_text>Game Preview</link_text>
+    <!--<link>https://www.youtube.com/watch?v=LQcMOI8dMas</link>-->
+    <!--<link_text>Game Preview</link_text>-->
 
     <about>Founded in 2024 Both Good is an independent game studio located in Brooklyn, NY. We believe in 
         the importance of “play” and games bringing people together. We design games that are friendly 
