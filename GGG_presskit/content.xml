@@ -21,14 +21,16 @@
 
     <!-- List all features in individual feature tags. They'll be turned into bullet points on the front end. -->
 
-     <feature>Write about the technical features of the game, from gameplay to neat additions like multiplayer or cool integrations.</feature>
-     <feature>There are multiple lines here since these should be bullet points.</feature>
-     <feature>Another bullet to be sure the bullet point system is working.</feature>
+     <feature>Same-screen local multiplayer with dynamic split screen</feature>
+     <feature>Dozens of unique ability and upgrade combinations</feature>
+     <feature>Multiple Map layouts that reward different strategies</feature>
+    <feature>An exciting original soundtrack</feature>
+    <feature>Cute and colorful pixel art mixed with dynamic lighting and shader effects</feature>
+    <feature>Powerful special abilities</feature>
 
     <!-- Just the end of a given YouTube link, after watch?v=. One per element. -->
 
-     <video>lYwQVl5_YnQ</video>
-     <video>LyM1UGD8sqM</video>
+     <video>z69Z_Hpk08U</video>
 
      <!-- The file name of whichever image you want shown in the "imgAndVid" folder! -->
 
