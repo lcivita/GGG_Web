@@ -67,33 +67,47 @@
         and inviting, but with gameplay that can be taken seriously. Our team is dedicated to creating games 
         that we ourselves want to play, and think are worth sharing.</about>
 
-    <credit-name>Luca Civita</credit-name>
-    <credit-subtitle>Lead Developer, Programmer, Artist, Co-founder</credit-subtitle>
-    <credit-link>https://www.lucacivita.com/</credit-link>
-    
-    <credit-name>Justin Cook</credit-name>
-    <credit-subtitle>Game Designer, Operations, Co-founder</credit-subtitle>
-    <credit-link></credit-link>
-    
-    <credit-name>Jason Li</credit-name>
-    <credit-subtitle>Production Planning, Technical Direction</credit-subtitle>
-    <credit-link>https://ovenfresh.itch.io/</credit-link>
-    
-    <credit-name>Jay Tobin</credit-name>
-    <credit-subtitle>Audio Design, Composer, SEO</credit-subtitle>
-    <credit-link>https://dayflowerstudio.com/work/</credit-link>
-    
-    <credit-name>Ally Luo</credit-name>
-    <credit-subtitle>Web Developer</credit-subtitle>
-    <credit-link></credit-link>
-    
-    <credit-name>Zachary Mezzo</credit-name>
-    <credit-subtitle>Composer</credit-subtitle>
-    <credit-link></credit-link>
-    
-    <credit-name>Sanjay Henry</credit-name>
-    <credit-subtitle>Composer</credit-subtitle>
-    <credit-link></credit-link>
+    <div class="credit">
+        <credit-name>Luca Civita</credit-name>
+        <credit-subtitle>Lead Developer, Programmer, Artist, Co-founder</credit-subtitle>
+        <credit-link>https://www.lucacivita.com/</credit-link>
+    </div>
+
+    <div class="credit">
+        <credit-name>Justin Cook</credit-name>
+        <credit-subtitle>Game Designer, Operations, Co-founder</credit-subtitle>
+        <credit-link></credit-link>
+    </div>
+
+    <div class="credit">
+        <credit-name>Jason Li</credit-name>
+        <credit-subtitle>Production Planning, Technical Direction</credit-subtitle>
+        <credit-link>https://ovenfresh.itch.io/</credit-link>
+    </div>
+
+    <div class="credit">
+        <credit-name>Jay Tobin</credit-name>
+        <credit-subtitle>Audio Design, Composer, SEO</credit-subtitle>
+        <credit-link>https://dayflowerstudio.com/work/</credit-link>
+    </div>
+
+    <div class="credit">
+        <credit-name>Ally Luo</credit-name>
+        <credit-subtitle>Web Developer</credit-subtitle>
+        <credit-link></credit-link>
+    </div>
+
+    <div class="credit">
+        <credit-name>Zachary Mezzo</credit-name>
+        <credit-subtitle>Composer</credit-subtitle>
+        <credit-link></credit-link>
+    </div>
+
+    <div class="credit">
+        <credit-name>Sanjay Henry</credit-name>
+        <credit-subtitle>Composer</credit-subtitle>
+        <credit-link></credit-link>
+    </div>
 
    <contact>Business inqueries email:</contact>
    <contact>BothGood@bothgood.games</contact>
