@@ -1,59 +1,102 @@
 <content>
-    <title>Press Kit for Goo Goo Grapplers</title>
-    <studio>A Game from Both Good</studio>
-    <meta-description></meta-description>
+    <title>Goo Goo Grapplers Press Kit</title>
+    <studio>A Game by Both Good</studio>
+    <!-- <meta-description></meta-description>-->
+ 
+     <description>Goo Goo Grapplers is 1v1 Couch battle arena where you compete with your twin to see who is truly 
+         the better baby. Gather “Toy Parts” in exchange for powerful new abilities and upgrades that you can 
+         mix and match however you see fit. Shoot some milk, swing a rattle, and toot your way to victory as you lead an army of imaginary friends to take down your siblings pillow fort in this whacky little 
+         world.</description>
+ 
+      <history>From the beginning Goo Goo Grapplers had the goal to bring together elements from two very 
+          different places- Platform fighters and MOBAs. In 2023 the first prototype was born, manifesting as 
+          something between a tower defense and a fighting game. And while fun, like many prototypes it 
+          wasn’t ready to be developed further, and the idea was put to rest. However, after a year more of 
+          experience working on various games and gradually getting a small team together, Goo Goo 
+          Grapplers awoke from its nap. In it’s new form GGG takes a different approach, bringing together the 
+          gameplay, flow and strategy of a MOBA and the accessible, goofy couch fun of a platform fighter. 
+          Committed to its development and release, “Both Good” was formed in 2024. The new studio’s aim 
+          was not only set on completing and releasing GGG, but also on beginning the early stages of future 
+          IPs that are yet to be revealed.</history>
+ 
+     <!-- List all features in individual feature tags. They'll be turned into bullet points on the front end. -->
 
-    <description>This is where the description of the game goes!
-
-    We have multiple lines of text here just to show you can do this.</description>
-
-     <history>Write a bit about the history of your studio, the game, the general background of you and your product.</history>
-
-    <!-- List all features in individual feature tags. They'll be turned into bullet points on the front end. -->
-
-     <feature>Write about the technical features of the game, from gameplay to neat additions like multiplayer or cool integrations.</feature>
-     <feature>There are multiple lines here since these should be bullet points.</feature>
-     <feature>Another bullet to be sure the bullet point system is working.</feature>
+     <feature>Same-screen local multiplayer with dynamic split screen</feature>
+     <feature>Dozens of unique ability and upgrade combinations</feature>
+     <feature>Multiple Map layouts that reward different strategies</feature>
+    <feature>An exciting original soundtrack</feature>
+    <feature>Cute and colorful pixel art mixed with dynamic lighting and shader effects</feature>
+    <feature>Powerful special abilities</feature>
 
     <!-- Just the end of a given YouTube link, after watch?v=. One per element. -->
 
-     <video>lYwQVl5_YnQ</video>
-     <video>LyM1UGD8sqM</video>
+     <video>z69Z_Hpk08U</video>
 
      <!-- The file name of whichever image you want shown in the "imgAndVid" folder! -->
 
      <images>slideshow1_image1.jpg</images>
      <images>slideshow1_image2.png</images>
-     <images>slideshow1_image2.png</images>
+     <images>slideshow1_image3.png</images>
+     <images>Press_Menus_Join.png</images>
+     <images>Press_Bedtime_1.png</images>
+     <images>Press_Bedtime_2.png</images>
+     <images>Press_Bedtime_3.png</images>
 
      <!-- The file name of whichever logo you want shown in the "imgAndVid" folder! -->
 
      <logo_and_icon>BothGood_Logo_Web.png</logo_and_icon>
+     <logo_and_icon>GGG_Logo_Web.png</logo_and_icon>
 
     <!-- Selected articles to come! -->
 
-    <monetization>Your legal spiel on what is and isn't allowed to be monetized.</monetization>
+    <monetization>Both Good allows for the contents of Goo Goo Grapplers to be
+        published through video broadcasting services for any commercial or
+        non-commercial purposes. Monetization of videos created containing
+        assets from Goo Goo Grapplers is legally &amp; explicitly allowed
+        by Both Good. This permission can be found in writing at
+        https://www.googoograpplers.com/GGG_presskit/presskit.</monetization>
 
     <!-- Links have "link_text," which is what links will embed into, and "link," which is the actual link -->
     <!-- Keep them in this relative order, just copy + paste where needed -->
 
-    <link>https://www.youtube.com/watch?v=LQcMOI8dMas</link>
-    <link_text>Links go here.</link_text>
+    <link>https://www.googoograpplers.com/</link>
+    <link_text>Main Site</link_text>
+    
+    <about>Founded in 2024 Both Good is an independent game studio located in Brooklyn, NY. We believe in 
+        the importance of “play” and games bringing people together. We design games that are friendly 
+        and inviting, but with gameplay that can be taken seriously. Our team is dedicated to creating games 
+        that we ourselves want to play, and think are worth sharing.</about>
+    
+        <credit-name>Luca Jeha Civita</credit-name>
+        <credit-subtitle>Lead Developer, Programmer, Artist, Co-founder</credit-subtitle>
+        <credit-link>https://www.lucacivita.com/</credit-link>
+        <credit-name>Justin Cook</credit-name>
+        <credit-subtitle>Game Designer, Operations, Co-founder</credit-subtitle>
+        <credit-link>https://www.googoograpplers.com/GGG_presskit/presskit/</credit-link>
+        <credit-name>Jason Li</credit-name>
+        <credit-subtitle>Production Planning, Technical Direction</credit-subtitle>
+        <credit-link>https://ovenfresh.itch.io/</credit-link>
+        <credit-name>Jay Tobin</credit-name>
+        <credit-subtitle>Audio Design, Composer, SEO</credit-subtitle>
+        <credit-link>https://dayflowerstudio.com/work/</credit-link>
+        <credit-name>Ally Luo</credit-name>
+        <credit-subtitle>Web Developer</credit-subtitle>
+        <credit-link>https://www.googoograpplers.com/GGG_presskit/presskit/</credit-link>
+        <credit-name>Zachary Mezzo</credit-name>
+        <credit-subtitle>Composer</credit-subtitle>
+        <credit-link>https://www.googoograpplers.com/GGG_presskit/presskit/</credit-link>
+        <credit-name>Sanjay Henry</credit-name>
+        <credit-subtitle>Composer</credit-subtitle>
+        <credit-link>https://www.googoograpplers.com/GGG_presskit/presskit/</credit-link>
 
-    <about>The About blurb about the studio!</about>
+   <contact>Business inqueries email:</contact>
+   <contact>BothGood@bothgood.games</contact>
+   <contact>Press inqueries email:</contact>
+   <contact>contact@googoograpplers.com</contact>
+   <!-- <contact>Website:</contact>-->
 
-    <credit-name>Credits for the game!</credit-name>
-    <credit-subtitle>There will be several of these!</credit-subtitle>
-    <credit-link>https://splatoonwiki.org/wiki/Big_Man</credit-link>
-
-    <contact>Business inqueries email:</contact>
-    <contact>[email here]</contact>
-    <contact>Press inqueries email:</contact>
-    <contact>[email here]</contact>
-    <contact>Website:</contact>
-
-    <site-title>[site name here]</site-title>
-    <site-link>https://www.googoograpplers.com/</site-link>
+ <site-title>Goo Goo Grapplers</site-title>
+ <site-link>https://www.googoograpplers.com/</site-link>
 
 
 </content>
