@@ -85,6 +85,7 @@ fetch('content.xml')
         let titleSrc = creditName[i].childNodes[0].nodeValue;
         let title = document.createElement("p");
         title.innerHTML = titleSrc;
+        title.className = "title";
         let linkSubtitleText = document.createTextNode(linksTextSrc);
         //linkSubtitleText.classList.add("subtitle")
         let link = document.createElement("a");
