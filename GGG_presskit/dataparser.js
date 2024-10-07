@@ -131,7 +131,7 @@ fetch('content.xml')
 })
 .catch(error => console.error('Error fetching XML:', error));
 
-document.querySelector(".the-nav").style.display = "none";
+// document.querySelector(".the-nav").style.display = "none";
 
 function menu(){
     if(document.querySelector(".the-nav").style.display === "none"){
@@ -142,5 +142,5 @@ function menu(){
     }
 }
 
-document.getElementById("nav-hed").addEventListener("touchstart", menu);
-document.getElementById("nav-hed").addEventListener("click", menu);
+document.getElementById("mobile-nav-element").addEventListener("touchstart", menu);
+document.getElementById("mobile-nav-element").addEventListener("click", menu);
