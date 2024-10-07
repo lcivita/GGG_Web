@@ -57,8 +57,9 @@ p {
 }
 
 .embedded-image {
-    width: 600px;
+    width: 450px;
     height: auto;
+    padding-right: 5px;
 }
 
 .breaker {
@@ -71,6 +72,8 @@ p {
     height: 0px;
     width: 50%;
     border: 1px solid black;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 #mobile-nav-element {
