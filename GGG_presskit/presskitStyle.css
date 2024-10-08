@@ -9,9 +9,18 @@
 }
 
 #nav-container {
+    margin-top: 0.5rem;
     width: 20%;
     padding-left: 5%;
     margin-right: 5%;
+}
+
+#navigation-title {
+    margin-bottom: 1rem;
+}
+
+.individual-title-and-text {
+    padding-bottom: 0.25rem;
 }
 
 nav {
@@ -22,7 +31,7 @@ nav {
 }
 
 .nav-item {
-    font-weight: bold;
+    font-weight: 400;
     cursor: pointer;
     margin-bottom: 1.5rem;
     color: black;
@@ -40,6 +49,8 @@ body {
 
 h3 {
     font-size: 1.65rem;
+    margin-bottom: 0.25rem;
+    font-weight: 400;
 }
 
 
@@ -62,18 +73,12 @@ p {
     padding-right: 5px;
 }
 
-.breaker {
-    height: 0px;
-    width: 50%;
-    border: 2px solid black;
-}
-
 .mini-breaker {
     height: 0px;
-    width: 50%;
-    border: 1px solid black;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    width: 75%;
+    border: 0.5px solid darkgray;
+    margin-top: 0.0rem;
+    margin-bottom: 0.5rem;
 }
 
 #mobile-nav-element {
@@ -92,14 +97,16 @@ p {
 
 .mini-brand {
     color: gray;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 400;
 }
 
 .mini-brand > a {
-    color: gray
+    color: gray;
+    font-weight: 900;
 }
 
 
@@ -128,7 +135,7 @@ p {
         display: block;
         position: absolute;
         right: 0px;
-        top: 2.5rem;
+        top: 3rem;
         z-index: 999;
     }
 
@@ -155,12 +162,6 @@ p {
     .embedded-image {
         width: 100%;
         height: auto;
-    }
-    
-    .breaker {
-        height: 0px;
-        width: 100%;
-        border: 2px solid black;
     }
     
     .mini-breaker {
