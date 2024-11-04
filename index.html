@@ -22,8 +22,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    
-    
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            animation: backgroundChange 1s infinite alternate;
+            background-image: url('img/starBg_0.jpg'); /* First image */
+            background-size: cover;
+            background-position: center;
+            image-rendering: pixelated;
+        }
+
+        @keyframes backgroundChange {
+            0% {
+                background-image: url('img/starBg_0.jpg');
+            }
+            50% {
+                background-image: url('img/starBg_0.jpg');
+            }
+            51% {
+                background-image: url('img/starBg_1.jpg');
+            }
+            100% {
+                background-image: url('img/starBg_1.jpg'); /* Second image */
+            }
+        }
+    </style>
 </head>
 <body id="home">
 <div id="pageContainer">
