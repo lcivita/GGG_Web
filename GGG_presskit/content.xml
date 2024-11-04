@@ -34,13 +34,14 @@
 
      <!-- The file name of whichever image you want shown in the "imgAndVid" folder! -->
 
-     <images>slideshow1_image1.jpg</images>
-     <images>slideshow1_image2.png</images>
-     <images>slideshow1_image3.png</images>
-     <images>Press_Menus_Join.png</images>
-     <images>Press_Bedtime_1.png</images>
-     <images>Press_Bedtime_2.png</images>
-     <images>Press_Bedtime_3.png</images>
+     <images>ss_0.jpg</images>
+     <images>ss_1.jpg</images>
+     <images>ss_2.jpg</images>
+     <images>ss_3.jpg</images>
+     <images>ss_4.jpg</images>
+     <images>ss_5.jpg</images>
+     <images>ss_6.jpg</images>
+     <images>ss_7.jpg</images>
 
      <!-- The file name of whichever logo you want shown in the "imgAndVid" folder! -->
 
@@ -72,7 +73,7 @@
         <credit-link>https://www.lucacivita.com/</credit-link>
         <credit-name>Justin Cook</credit-name>
         <credit-subtitle>Game Designer, Operations, Co-founder</credit-subtitle>
-        <credit-link>https://www.googoograpplers.com/GGG_presskit/presskit/</credit-link>
+        <credit-link>https://www.googoograpplers.com/presskit/</credit-link>
         <credit-name>Jason Li</credit-name>
         <credit-subtitle>Production Planning, Technical Direction</credit-subtitle>
         <credit-link>https://ovenfresh.itch.io/</credit-link>
@@ -81,13 +82,13 @@
         <credit-link>https://dayflowerstudio.com/work/</credit-link>
         <credit-name>Ally Luo</credit-name>
         <credit-subtitle>Web Developer</credit-subtitle>
-        <credit-link>https://www.googoograpplers.com/GGG_presskit/presskit/</credit-link>
+        <credit-link>https://www.luoyanxiu.com</credit-link>
         <credit-name>Zachary Mezzo</credit-name>
         <credit-subtitle>Composer</credit-subtitle>
-        <credit-link>https://www.googoograpplers.com/GGG_presskit/presskit/</credit-link>
+        <credit-link>https://www.zacharymezzo.com/</credit-link>
         <credit-name>Sanjay Henry</credit-name>
         <credit-subtitle>Composer</credit-subtitle>
-        <credit-link>https://www.googoograpplers.com/GGG_presskit/presskit/</credit-link>
+        <credit-link>https://www.sanjayhenry.com/</credit-link>
 
    <contact>Business inqueries email:</contact>
    <contact>BothGood@bothgood.games</contact>
