@@ -1,111 +1,65 @@
-var body = document.body;
+// Variables and element references
 var layers = document.getElementsByClassName("parallaxLayer");
 var ninoLayers = document.getElementsByClassName("ninoParallaxLayer");
 var nino = document.getElementById("ninoParallaxWrapper");
 
-let scrollUnit = 20;
-let accumulatedScroll = 0;
-let currentScrollPosition = 0;
-let isAnimating = false;
-
-function snapScrollPosition(direction) {
-  currentScrollPosition += direction * scrollUnit;
-  
-  currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, getTotalContentHeight() - window.innerHeight));
-  
-  window.scrollTo(0, currentScrollPosition);
-  
-  doParallax();
-  
-  isAnimating = false;
-}
-
-function getTotalContentHeight() {
+// Get the maximum scroll position to prevent over-scrolling
+function getMaxScrollPosition() {
   var lastLayer = layers[layers.length - 1];
   var lastLayerBottom = lastLayer.getBoundingClientRect().bottom + window.pageYOffset;
-  return lastLayerBottom;
+  return lastLayerBottom - window.innerHeight;
 }
 
-function doParallax() {
-  var top = currentScrollPosition;
-  topParallax(top);
+// Parallax function
+function doParallax(scrollPos) {
+  topParallax(scrollPos);
   botParallax();
 }
 
+// Top parallax function
 function topParallax(top) {
-  var layer, speed, yPos;
   for (var i = 0; i < layers.length; i++) {
-    layer = layers[i];
-    speed = layer.dataset.speed;
-    yPos = -(top * speed / 100);
+    var layer = layers[i];
+    var speed = layer.dataset.speed;
+    var yPos = -(top * speed / 100);
     layer.style.transform = 'translate3d(0,' + yPos + 'px, 0)';
   }
 }
 
+// Bottom parallax function
 function botParallax() {
   if (!nino) return;
 
   var ninoRect = nino.getBoundingClientRect().height;
   var ninoPos = nino.getBoundingClientRect().top - window.innerHeight;
-  var ninoLayer, ninoSpeed, ninoYPos;
-
   for (var i = 0; i < ninoLayers.length; i++) {
-    ninoLayer = ninoLayers[i];
-    ninoSpeed = ninoLayer.dataset.speed;
-    if (ninoPos < 0) {
-      ninoYPos = (ninoPos / ninoRect) * ninoSpeed;
-      ninoLayer.style.transform = 'translate3d(0,' + -ninoYPos + 'px, 0)';
-    } else {
-      ninoLayer.style.transform = 'translate3d(0, 0px, 0)';
-    }
+    var ninoLayer = ninoLayers[i];
+    var ninoSpeed = ninoLayer.dataset.speed;
+    var ninoYPos = ninoPos < 0 ? (ninoPos / ninoRect) * ninoSpeed : 0;
+    ninoLayer.style.transform = 'translate3d(0,' + -ninoYPos + 'px, 0)';
   }
 }
 
-function onScroll(event) {
-  // Prevent default scrolling behavior
-  event.preventDefault();
+// On scroll, apply parallax and boundary
+function onScroll() {
+  var scrollPos = window.scrollY;
+  var maxScroll = getMaxScrollPosition();
 
-  let delta = event.deltaY || -event.detail || event.wheelDelta;
-
-  accumulatedScroll += delta / 2;
-  while (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
-    let direction = accumulatedScroll > 0 ? 1 : -1; // Determine the scroll direction
-
-    accumulatedScroll -= direction * scrollUnit; // Reduce accumulated scroll by one unit in the direction
-
-    snapScrollPosition(direction); // Snap to the next scroll unit
-  }
-}
-
-window.addEventListener("wheel", onScroll, { passive: false });
-window.addEventListener("touchstart", onTouchStart, { passive: false });
-window.addEventListener("touchmove", onTouchMove, { passive: false });
-
-let startY = 0;
-let lastDeltaY = 0;
-
-function onTouchStart(event) {
-  startY = event.touches[0].clientY;
-}
-
-function onTouchMove(event) {
-  event.preventDefault();
-
-  let deltaY = startY - event.touches[0].clientY;
-  
-  deltaY = lastDeltaY + (deltaY - lastDeltaY) * 0.2;
-  lastDeltaY = deltaY;
-  
-  accumulatedScroll += deltaY;
-  
-  if (Math.abs(accumulatedScroll) >= scrollUnit && !isAnimating) {
-    let direction = accumulatedScroll > 0 ? 1 : -1;
-    accumulatedScroll = 0;
-    snapScrollPosition(direction);
+  // Ensure scroll position does not exceed boundaries
+  if (scrollPos > maxScroll) {
+    window.scrollTo(0, maxScroll); // Stop scrolling beyond max scroll
+    scrollPos = maxScroll;
+  } else if (scrollPos < 0) {
+    window.scrollTo(0, 0); // Prevent scrolling above the top
+    scrollPos = 0;
   }
 
-  startY = event.touches[0].clientY;
+  // Apply parallax based on bounded scroll position
+  doParallax(scrollPos);
 }
+
+// Use natural scrolling with bounds
+window.addEventListener("scroll", onScroll);
 
 // Slideshow functionality
 function startSlideshow(slideshowId, interval = 6000) {
@@ -125,6 +79,7 @@ function startSlideshow(slideshowId, interval = 6000) {
   setInterval(showNextSlide, interval);
 }
 
+// Start the slideshow(s) on DOM content loaded
 document.addEventListener('DOMContentLoaded', function () {
   startSlideshow('slideshow1');
   startSlideshow('slideshow2');
